@@ -6,6 +6,7 @@ import 'package:kamao/app/components/widgets/custom_tab_bar_view.dart';
 import 'package:kamao/app/modules/account_profile_page/account_settings/account_settings_page.dart';
 import 'package:kamao/app/modules/account_profile_page/profile_page/profile_list_page.dart';
 import 'package:kamao/app/modules/account_profile_page/views/account_profile_header.dart';
+import 'package:kamao/app/theme/colors.dart';
 
 import '../controllers/account_profile_page_controller.dart';
 
@@ -43,12 +44,15 @@ class AccountProfilePageView extends GetView<AccountProfilePageController> {
           ];
         }, body: Builder(
           builder: (context) {
-            return TabBarView(
-              controller: controller.tabController,
-              children: const [
-                ProfileListPage(),
-                AccountSettingsPage(),
-              ],
+            return Container(
+              color: Kolors.backgroundSecondary,
+              child: TabBarView(
+                controller: controller.tabController,
+                children: const [
+                  ProfileListPage(),
+                  AccountSettingsPage(),
+                ],
+              ),
             );
           },
         )),

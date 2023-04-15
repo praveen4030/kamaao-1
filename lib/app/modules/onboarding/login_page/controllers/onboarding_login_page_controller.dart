@@ -17,12 +17,13 @@ class OnboardingLoginPageController extends GetxController {
     ),
     LoginSlidesModel(
       title: "Refer Jobs & Gigs and Earn Money",
-      subTitle: "You can share these jobs and in exchange earn rewards",
+      subTitle: "You can share Kamaao jobs and earn rewards.",
       image: ImagePath.imgSecond,
     ),
     LoginSlidesModel(
       title: "Refer Financial Projects and Earn Money",
-      subTitle: "Complete Freelance Projects & generate a Side Income",
+      subTitle:
+          "Refer products like: Demat A/c, Saving A/c, Credit Card, Personal Loan, Credit Line etc. ",
       image: ImagePath.imgThird,
     ),
   ];

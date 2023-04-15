@@ -8,6 +8,7 @@ import 'package:image_picker/image_picker.dart';
 class OnboardingAddUserDetailsPageController extends GetxController {
   TextEditingController nameTEC = TextEditingController();
   TextEditingController dobTEC = TextEditingController();
+  TextEditingController genderTEC = TextEditingController();
 
   RxString genderSelected = "".obs;
   Rxn<DateTime> dateOfBirth = Rxn<DateTime>();

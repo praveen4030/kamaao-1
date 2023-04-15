@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kamao/app/components/text/custom_text.dart';
 import 'package:kamao/app/theme/colors.dart';
 
@@ -21,9 +22,11 @@ class DropdownButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return DropdownButtonFormField(
       iconSize: 0,
+      isDense: true,
+      isExpanded: true,
       decoration: InputDecoration(
         icon: null,
-        contentPadding: const EdgeInsets.all(15),
+        contentPadding: const EdgeInsets.all(0),
         labelText: hint,
         labelStyle: const TextStyle(
           color: Color(0xff6E6E6E),
@@ -74,11 +77,16 @@ class DropdownButtonWidget extends StatelessWidget {
       items: values.map((item) {
         return DropdownMenuItem(
           value: item,
-          child: Text(
-            item,
-            style: CustomTextStyle(
-              textSize: 14,
-            ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                item,
+                style: CustomTextStyle(
+                  textSize: 14,
+                ),
+              ),
+            ],
           ),
         );
       }).toList(),

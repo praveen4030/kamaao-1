@@ -26,7 +26,7 @@ class ProfileListTile extends StatelessWidget {
           ),
           boxShadow: [
             BoxShadow(
-              color: Kolors.borderColor,
+              color: Kolors.boxShadowColor.withOpacity(0.07),
               spreadRadius: 0,
               blurRadius: 8,
               offset: const Offset(0, 2),

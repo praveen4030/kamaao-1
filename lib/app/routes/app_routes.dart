@@ -73,6 +73,7 @@ abstract class Routes {
   static const ACCOUNT_PROFILE_PAGE_TRANSFER_TO_BANK_PAGE =
       _Paths.ACCOUNT_PROFILE_PAGE +
           _Paths.ACCOUNT_PROFILE_PAGE_TRANSFER_TO_BANK_PAGE;
+  static const WEB_VIEW = _Paths.WEB_VIEW;
 }
 
 abstract class _Paths {
@@ -124,4 +125,5 @@ abstract class _Paths {
   static const ACCOUNT_PROFILE_PAGE_PAYMENT_SETTINGS = '/payment-settings';
   static const ACCOUNT_PROFILE_PAGE_TRANSFER_TO_BANK_PAGE =
       '/transfer-to-bank-page';
+  static const WEB_VIEW = '/web-view';
 }

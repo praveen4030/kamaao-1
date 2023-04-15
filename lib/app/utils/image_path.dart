@@ -5,9 +5,9 @@ class ImagePath {
   static String arrowLeft = "${base}ic_arrow_left.png";
 
   /// ----- -->>>>> contact us  Screen------------------///
-  static String imgFirst = "${base}img_first.png";
-  static String imgSecond = "${base}img_second.png";
-  static String imgThird = "${base}img_third.png";
+  static String imgFirst = "${base}png/login1.png";
+  static String imgSecond = "${base}png/login2.png";
+  static String imgThird = "${base}png/login3.png";
   static String imgFlag = "${base}img_flag.png";
   static String imgSave = "${base}ic_save.png";
   static String icLine = "${base}ic_line.png";

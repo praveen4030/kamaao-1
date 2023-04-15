@@ -38,20 +38,20 @@ class AccountProfilePageSkillDetailsView
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
-                        crossAxisSpacing: 10,
-                        mainAxisSpacing: 10,
+                        crossAxisSpacing: 20,
+                        mainAxisSpacing: 12,
                         childAspectRatio: 0.7,
                       ),
                       itemBuilder: (context, index) {
                         return Obx(
                           () => GestureDetector(
                             onTap: () {
-                              controller.itemSelected(index);
+                              controller.skillsList[index].isSelected.toggle();
                             },
                             child: ImageTileButton(
                               imageTileModel: controller.skillsList[index],
                               isSelected:
-                                  controller.itemSelected.value == index,
+                                  controller.skillsList[index].isSelected.value,
                             ),
                           ),
                         );
@@ -67,7 +67,7 @@ class AccountProfilePageSkillDetailsView
       ),
       bottomSheet: Obx(
         () => BottomSheetButton(
-          isEnabled: controller.itemSelected.value != -1,
+          isEnabled: isAnySelected(),
           text: "Save",
           onTap: () {
             Get.back();
@@ -75,5 +75,9 @@ class AccountProfilePageSkillDetailsView
         ),
       ),
     );
+  }
+
+  bool isAnySelected() {
+    return controller.skillsList.any((element) => element.isSelected.value);
   }
 }

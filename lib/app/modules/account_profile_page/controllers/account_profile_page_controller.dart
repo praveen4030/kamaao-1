@@ -105,12 +105,17 @@ class AccountProfilePageController extends GetxController
       AccountSettingModel(
         text: "Term of Services",
         icon: ImagePath.terms,
-        onTap: () {},
+        onTap: () {
+          Get.toNamed(Routes.WEB_VIEW,
+              arguments: 'https://kamaao.app/user-agreement');
+        },
       ),
       AccountSettingModel(
         text: "Privacy Policy",
         icon: ImagePath.privacy,
-        onTap: () {},
+        onTap: () {
+          Get.toNamed(Routes.WEB_VIEW, arguments: 'https://kamaao.app/privacy');
+        },
       ),
       AccountSettingModel(
           text: "Logout",

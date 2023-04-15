@@ -34,9 +34,13 @@ class _OtpPinFieldsWidgetState extends State<OtpPinFieldsWidget> {
         return Container(
           width: 50,
           margin: const EdgeInsets.only(right: 24),
-          color: _controller[index].text.isNotEmpty
-              ? Kolors.integrfaceInputBg
-              : Kolors.backgroundSecondary,
+          decoration: BoxDecoration(
+            color: _controller[index].text.isNotEmpty
+                ? Kolors.integrfaceInputBg
+                : Kolors.backgroundSecondary,
+            borderRadius: BorderRadius.circular(4),
+            border: Border.all(color: Kolors.dividerColor),
+          ),
           child: TextField(
             cursorColor: Kolors.checkBoxColor,
             controller: _controller[index],
@@ -48,12 +52,7 @@ class _OtpPinFieldsWidgetState extends State<OtpPinFieldsWidget> {
             decoration: const InputDecoration(
               fillColor: Kolors.backgroundSecondary,
               contentPadding: EdgeInsets.zero,
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Kolors.seperatorLight),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Kolors.integrfaceInputBg),
-              ),
+              border: InputBorder.none,
             ),
             onChanged: (value) {
               if (value.length == 1) {

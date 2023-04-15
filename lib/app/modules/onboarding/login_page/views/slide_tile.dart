@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kamao/app/components/text/custom_text.dart';
 import 'package:kamao/app/modules/onboarding/login_page/models/login_slides_model.dart';
 import 'package:kamao/app/theme/colors.dart';
@@ -18,6 +19,8 @@ class SlideTile extends StatelessWidget {
         Image.asset(
           model.image,
           height: 380,
+          width: Get.width,
+          fit: BoxFit.fill,
         ),
         const SizedBox(
           height: 5,

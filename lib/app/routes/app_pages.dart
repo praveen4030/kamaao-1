@@ -74,6 +74,8 @@ import '../modules/project_page/bindings/project_page_binding.dart';
 import '../modules/project_page/views/project_page_view.dart';
 import '../modules/splash_page/bindings/splash_page_binding.dart';
 import '../modules/splash_page/views/splash_page_view.dart';
+import '../modules/web_view/bindings/web_view_binding.dart';
+import '../modules/web_view/views/web_view_view.dart';
 
 part 'app_routes.dart';
 
@@ -268,6 +270,11 @@ class AppPages {
           binding: AccountProfilePageHelpPageBinding(),
         ),
       ],
+    ),
+    GetPage(
+      name: _Paths.WEB_VIEW,
+      page: () => const WebViewView(),
+      binding: WebViewBinding(),
     ),
   ];
 }

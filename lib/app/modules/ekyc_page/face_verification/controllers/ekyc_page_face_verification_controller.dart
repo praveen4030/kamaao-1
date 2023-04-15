@@ -16,6 +16,13 @@ class EkycPageFaceVerificationController extends GetxController {
     onCameraSelected();
   }
 
+  @override
+  void onClose() {
+    // TODO: implement onClose
+    cameraController?.dispose();
+    super.onClose();
+  }
+
   void showSuccessDialog() {
     Future.delayed(const Duration(seconds: 2), () {
       Get.back();
@@ -50,7 +57,7 @@ class EkycPageFaceVerificationController extends GetxController {
     try {
       final cameras = await availableCameras();
       final backCamera = cameras.firstWhere(
-        (camera) => camera.lensDirection == CameraLensDirection.back,
+        (camera) => camera.lensDirection == CameraLensDirection.front,
       );
 
       cameraController = CameraController(

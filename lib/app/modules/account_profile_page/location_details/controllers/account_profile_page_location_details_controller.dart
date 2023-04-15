@@ -1,8 +1,11 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AccountProfilePageLocationDetailsController extends GetxController {
   List<String> locationsList = [];
   RxList<String> selectedLocation = RxList.empty(growable: true);
+  RxString searchText = "".obs;
+  final TextEditingController searchTEC = TextEditingController();
   @override
   void onInit() {
     super.onInit();

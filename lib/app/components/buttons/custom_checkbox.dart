@@ -16,6 +16,7 @@ class CustomCheckBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Obx(
           () => Checkbox(
@@ -26,9 +27,6 @@ class CustomCheckBox extends StatelessWidget {
             value: isSelected.value,
             activeColor: Kolors.checkBoxColor,
           ),
-        ),
-        const SizedBox(
-          width: 15,
         ),
         Expanded(
           child: Text(

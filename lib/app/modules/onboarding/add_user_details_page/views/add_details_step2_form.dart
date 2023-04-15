@@ -12,7 +12,7 @@ class AddDetailsStep2Form
     return Column(
       children: [
         const SizedBox(
-          height: 16,
+          height: 20,
         ),
         TextFieldWidget(
           hint: "Email",

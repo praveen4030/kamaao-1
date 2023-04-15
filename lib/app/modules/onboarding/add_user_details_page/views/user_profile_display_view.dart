@@ -72,7 +72,7 @@ class UserProfileDisplayView
                 ),
               ),
               Container(
-                height: 100,
+                height: 110,
                 width: double.maxFinite,
                 decoration: const BoxDecoration(
                   color: Color(0xffF7F1FF),
@@ -86,6 +86,9 @@ class UserProfileDisplayView
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        const SizedBox(
+                          height: 2,
+                        ),
                         iconText(
                             'assets/images/png/icons/location.png',
                             controller.locationChanged.value.isNotEmpty
@@ -124,8 +127,11 @@ class UserProfileDisplayView
                         fit: BoxFit.fill,
                       ),
                     ),
+                    padding: const EdgeInsets.only(
+                        bottom: 26, left: 26, right: 16, top: 16),
+                    alignment: Alignment.topRight,
                     child: Padding(
-                      padding: const EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(500),
                         child: InkWell(
@@ -141,7 +147,7 @@ class UserProfileDisplayView
                                 )
                               : Container(
                                   decoration: BoxDecoration(
-                                    color: Kolors.whiteColor,
+                                    color: Colors.white,
                                     borderRadius: BorderRadius.circular(500),
                                   ),
                                   child: Center(
@@ -168,7 +174,7 @@ class UserProfileDisplayView
 
   Widget iconText(String icon, String text) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+      padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,

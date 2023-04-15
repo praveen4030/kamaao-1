@@ -19,6 +19,12 @@ class EkycPageTakeDocumentPhotoController extends GetxController {
     subtitle = Get.arguments['subtitle'];
   }
 
+  @override
+  void onClose() {
+    cameraController?.dispose();
+    super.onClose();
+  }
+
   Future<void> onCameraSelected() async {
     try {
       final cameras = await availableCameras();

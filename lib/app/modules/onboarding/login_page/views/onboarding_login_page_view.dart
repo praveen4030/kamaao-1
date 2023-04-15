@@ -25,9 +25,10 @@ class OnboardingLoginPageView extends GetView<OnboardingLoginPageController> {
         elevation: 0,
       ),
       body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         children: [
           const SizedBox(
-            height: 16,
+            height: 20,
           ),
           CarouselSlider(
             options: CarouselOptions(
@@ -57,6 +58,9 @@ class OnboardingLoginPageView extends GetView<OnboardingLoginPageController> {
               );
             }).toList(),
           ),
+          const SizedBox(
+            height: 8,
+          ),
           Obx(
             () => Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -73,11 +77,11 @@ class OnboardingLoginPageView extends GetView<OnboardingLoginPageController> {
             height: 25,
           ),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(
                 Radius.circular(5),
               ),
+              color: Kolors.fillClr,
               border: Border.all(
                 color: const Color(0xFFBFBFBF),
               ),
@@ -130,28 +134,21 @@ class OnboardingLoginPageView extends GetView<OnboardingLoginPageController> {
             height: 16,
           ),
           Obx(
-            () => Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: PrimaryButton(
-                isEnabled: controller.isNumberValidated.value &&
-                    controller.isCheckBoxSelected.value,
-                onTap: () async {
-                  Get.toNamed(Routes.ONBOARDING_OTP_PAGE);
-                },
-                title: "Submit",
-              ),
+            () => PrimaryButton(
+              isEnabled: controller.isNumberValidated.value,
+              onTap: () async {
+                Get.toNamed(Routes.ONBOARDING_OTP_PAGE);
+              },
+              title: "Submit",
             ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 28),
-            child: CustomCheckBox(
-              isSelected: controller.isCheckBoxSelected,
-              text: "I agree to recieve updated on Whatsapp",
-            ),
-          )
+          CustomCheckBox(
+            isSelected: controller.isCheckBoxSelected,
+            text: "I agree to recieve updated on Whatsapp",
+          ),
         ],
       ),
     );

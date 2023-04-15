@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kamao/app/components/text/custom_text.dart';
 import 'package:kamao/app/theme/colors.dart';
 
@@ -43,6 +44,7 @@ class ImageTileButton extends StatelessWidget {
         const Spacer(),
         Text(
           imageTileModel.title,
+          textAlign: TextAlign.center,
           style: CustomTextStyle(
             textWeight: FontWeight.w500,
             textColor: Kolors.tertiaryTextColor,
@@ -57,9 +59,11 @@ class ImageTileButton extends StatelessWidget {
 class ImageTileModel {
   final String title;
   final String image;
+  RxBool isSelected = false.obs;
 
   ImageTileModel({
     required this.title,
     required this.image,
+    required this.isSelected,
   });
 }

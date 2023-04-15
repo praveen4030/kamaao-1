@@ -87,6 +87,7 @@ class AccountProfilePageLocationDetailsView
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                             child: TextField(
+                              controller: controller.searchTEC,
                               cursorColor: const Color(0xff4E5D6B),
                               style: const TextStyle(color: Color(0xff4E5D6B)),
                               decoration: InputDecoration(
@@ -107,19 +108,32 @@ class AccountProfilePageLocationDetailsView
                               ),
                               onChanged: (value) {
                                 // do something
+                                controller.searchText(value);
                               },
                             ),
                           ),
                         ),
                       ),
-                      const SizedBox(width: 10),
-                      Text(
-                        "Cancel",
-                        style: CustomTextStyle(
-                          textColor: const Color(0xffE78353),
-                          textSize: 16,
-                          textWeight: Constants.medium,
-                        ),
+                      Obx(
+                        () => controller.searchText.value.isEmpty
+                            ? const SizedBox.shrink()
+                            : Padding(
+                                padding: const EdgeInsets.only(left: 10),
+                                child: InkWell(
+                                  onTap: () {
+                                    controller.searchTEC.clear();
+                                    controller.searchText("");
+                                  },
+                                  child: Text(
+                                    "Cancel",
+                                    style: CustomTextStyle(
+                                      textColor: const Color(0xffE78353),
+                                      textSize: 16,
+                                      textWeight: Constants.medium,
+                                    ),
+                                  ),
+                                ),
+                              ),
                       ),
                     ],
                   ),
