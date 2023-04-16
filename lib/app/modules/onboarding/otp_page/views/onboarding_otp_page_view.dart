@@ -34,8 +34,8 @@ class OnboardingOtpPageView extends GetView<OnboardingOtpPageController> {
                       Text(
                         'Verify with OTP',
                         style: CustomTextStyle(
-                          textWeight: FontWeight.w700,
-                          textSize: 20,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 20,
                         ),
                       ),
                       const SizedBox(
@@ -44,8 +44,8 @@ class OnboardingOtpPageView extends GetView<OnboardingOtpPageController> {
                       Text(
                         "OTP sent to +91-98258764631",
                         style: CustomTextStyle(
-                          textSize: 16,
-                          textColor: Kolors.titleColor,
+                          fontSize: 16,
+                          color: Kolors.secondarycolor,
                         ),
                       ),
                       const SizedBox(
@@ -68,17 +68,17 @@ class OnboardingOtpPageView extends GetView<OnboardingOtpPageController> {
                               Text(
                                 "Resend OTP",
                                 style: CustomTextStyle(
-                                  textWeight: FontWeight.w700,
-                                  textSize: 16,
-                                  textColor: Kolors.textDisabled,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 16,
+                                  color: Kolors.textDisabled,
                                 ),
                               ),
                               Text(
                                 " (30 sec)",
                                 style: CustomTextStyle(
-                                  textWeight: FontWeight.w700,
-                                  textSize: 16,
-                                  textColor: Kolors.textInfo,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 16,
+                                  color: Kolors.textInfo,
                                 ),
                               ),
                             ],
@@ -89,9 +89,9 @@ class OnboardingOtpPageView extends GetView<OnboardingOtpPageController> {
                               Text(
                                 "Change Number",
                                 style: CustomTextStyle(
-                                  textWeight: FontWeight.w700,
-                                  textSize: 16,
-                                  textColor: Kolors.orangeTextColor,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 16,
+                                  color: Kolors.orangecolor,
                                 ),
                               )
                             ],

@@ -44,15 +44,15 @@ class ChooseBankTile extends StatelessWidget {
                     Text(
                       bankModel.bank,
                       style: CustomTextStyle(
-                        textColor: Kolors.secondaryTextColor,
-                        textSize: 16,
+                        color: Kolors.secondarycolor,
+                        fontSize: 16,
                       ),
                     ),
                     Text(
                       "A/c No. ${bankModel.accountNo}",
                       style: CustomTextStyle(
-                        textColor: Kolors.tertiaryTextColor,
-                        textSize: 12,
+                        color: Kolors.tertiarycolor,
+                        fontSize: 12,
                       ),
                     ),
                   ],

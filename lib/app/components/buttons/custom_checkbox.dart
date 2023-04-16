@@ -30,8 +30,8 @@ class CustomCheckBox extends StatelessWidget {
         ),
         Expanded(
           child: Text(
-            style: CustomTextStyle(
-                textColor: const Color(0xFF6E6E6E), textSize: 15),
+            style:
+                CustomTextStyle(color: const Color(0xFF6E6E6E), fontSize: 15),
             text,
           ),
         )

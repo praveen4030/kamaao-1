@@ -35,18 +35,18 @@ class WalletBalanceHeader
             Text(
               "Wallet Balance",
               style: CustomTextStyle(
-                textColor: Colors.white,
-                textSize: 16,
-                textWeight: FontWeight.w500,
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
               ),
             ),
             const SizedBox(height: 7),
             Text(
               "₹5480",
               style: CustomTextStyle(
-                textColor: Colors.white,
-                textSize: 24,
-                textWeight: FontWeight.w700,
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ],

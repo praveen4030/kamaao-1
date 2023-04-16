@@ -49,8 +49,8 @@ class SelectButton extends StatelessWidget {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: CustomTextStyle(
-                    textColor: Kolors.seperatorHighlight,
-                    textWeight: Constants.medium,
+                    color: Kolors.seperatorHighlight,
+                    fontWeight: Constants.medium,
                   ),
                 ),
                 const SizedBox(

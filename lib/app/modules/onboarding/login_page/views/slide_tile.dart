@@ -31,9 +31,9 @@ class SlideTile extends StatelessWidget {
             model.title,
             textAlign: TextAlign.center,
             style: CustomTextStyle(
-              textColor: Kolors.appDarkTextColor,
-              textSize: 25,
-              textWeight: Constants.bold,
+              color: Kolors.appDarkcolor,
+              fontSize: 25,
+              fontWeight: Constants.bold,
             ),
           ),
         ),
@@ -46,7 +46,7 @@ class SlideTile extends StatelessWidget {
             model.subTitle,
             textAlign: TextAlign.center,
             style: CustomTextStyle(
-              textColor: Kolors.subTittleColor,
+              color: Kolors.secondarycolor,
             ),
           ),
         ),

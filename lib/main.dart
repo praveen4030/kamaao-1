@@ -5,10 +5,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kamao/app/modules/account_profile_page/bindings/account_profile_page_binding.dart';
+import 'package:kamao/app/modules/base_page/bindings/base_page_binding.dart';
 import 'package:kamao/app/modules/ekyc_page/bindings/ekyc_page_binding.dart';
 import 'package:kamao/app/modules/onboarding/add_user_details_page/bindings/onboarding_add_user_details_page_binding.dart';
 import 'package:kamao/app/modules/onboarding/select_language_page/bindings/onboarding_select_language_page_binding.dart';
 import 'package:kamao/app/modules/onboarding/select_language_page/views/onboarding_select_language_page_view.dart';
+import 'package:kamao/app/modules/project_page/bindings/project_page_binding.dart';
 import 'package:kamao/app/modules/splash_page/bindings/splash_page_binding.dart';
 import 'package:kamao/app/routes/app_pages.dart';
 
@@ -28,7 +30,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       initialRoute: AppPages.INITIAL,
-      initialBinding: OnboardingSelectLanguagePageBinding(),
+      initialBinding: BasePageBinding(),
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
       title: "Kamaao",
@@ -37,7 +39,7 @@ class MainApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           backgroundColor: Kolors.whiteColor,
           iconTheme: IconThemeData(
-            color: Kolors.appDarkTextColor,
+            color: Kolors.appDarkcolor,
           ),
         ),
       ),

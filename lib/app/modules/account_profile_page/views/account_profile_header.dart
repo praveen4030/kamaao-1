@@ -47,8 +47,8 @@ class AccountProfileHeader extends GetView<AccountProfilePageController> {
                               Text(
                                 controller.userDetailsModel.name,
                                 style: CustomTextStyle(
-                                  textSize: 14,
-                                  textColor: Kolors.whiteColor,
+                                  fontSize: 14,
+                                  color: Kolors.whiteColor,
                                 ),
                               ),
                               const SizedBox(
@@ -57,8 +57,8 @@ class AccountProfileHeader extends GetView<AccountProfilePageController> {
                               Text(
                                 "${controller.userDetailsModel.gender},  ${(UtilFunctions.getAge(controller.userDetailsModel.dob))}",
                                 style: CustomTextStyle(
-                                  textSize: 12,
-                                  textColor: Kolors.whiteColor,
+                                  fontSize: 12,
+                                  color: Kolors.whiteColor,
                                 ),
                               ),
                               const SizedBox(
@@ -123,7 +123,7 @@ class AccountProfileHeader extends GetView<AccountProfilePageController> {
                                       "assets/images/png/icons/add-circle.png",
                                       height: 24,
                                       width: 24,
-                                      color: Kolors.tertiaryTextColor,
+                                      color: Kolors.tertiarycolor,
                                     ),
                                   ),
                                 ),
@@ -195,9 +195,9 @@ class AccountProfileHeader extends GetView<AccountProfilePageController> {
             Text(
               "Edit your Profile",
               style: CustomTextStyle(
-                textSize: 12,
-                textColor: Kolors.whiteColor,
-                textWeight: FontWeight.w500,
+                fontSize: 12,
+                color: Kolors.whiteColor,
+                fontWeight: FontWeight.w500,
               ),
             ),
             const SizedBox(
@@ -231,7 +231,7 @@ class AccountProfileHeader extends GetView<AccountProfilePageController> {
             icon,
             height: 16,
             width: 16,
-            color: color ?? Kolors.secondaryTextColor,
+            color: color ?? Kolors.secondarycolor,
           ),
           const SizedBox(
             width: 8,
@@ -239,9 +239,9 @@ class AccountProfileHeader extends GetView<AccountProfilePageController> {
           Text(
             text,
             style: CustomTextStyle(
-              textSize: 12,
-              textColor: color ?? Kolors.secondaryTextColor,
-              textWeight: FontWeight.w500,
+              fontSize: 12,
+              color: color ?? Kolors.secondarycolor,
+              fontWeight: FontWeight.w500,
             ),
           )
         ],

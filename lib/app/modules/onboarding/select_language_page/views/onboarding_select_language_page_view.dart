@@ -34,8 +34,8 @@ class OnboardingSelectLanguagePageView
                         Text(
                           "Select your Preffered\nApp language",
                           style: CustomTextStyle(
-                            textSize: 22,
-                            textWeight: Constants.bold,
+                            fontSize: 22,
+                            fontWeight: Constants.bold,
                           ),
                         ),
                         const Spacer(),

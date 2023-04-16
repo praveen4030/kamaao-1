@@ -35,17 +35,17 @@ class AccountProfilePageLocationDetailsView
                           Text(
                             "In which Location do\nyou want a Job",
                             style: CustomTextStyle(
-                              textSize: 20,
-                              textWeight: Constants.bold,
+                              fontSize: 20,
+                              fontWeight: Constants.bold,
                             ),
                           ),
                           const SizedBox(height: 10),
                           Text(
                             "You can select max. 3 Location.",
                             style: CustomTextStyle(
-                              textColor: const Color(0xff6E6E6E),
-                              textSize: 14,
-                              textWeight: Constants.bold,
+                              color: const Color(0xff6E6E6E),
+                              fontSize: 14,
+                              fontWeight: Constants.bold,
                             ),
                           ),
                         ],
@@ -93,7 +93,7 @@ class AccountProfilePageLocationDetailsView
                               decoration: InputDecoration(
                                 prefixIcon: Icon(
                                   Icons.search_rounded,
-                                  color: Kolors.secondaryTextColor,
+                                  color: Kolors.secondarycolor,
                                 ),
                                 filled: true,
                                 fillColor: const Color(0xfff7f8f9),
@@ -127,9 +127,9 @@ class AccountProfilePageLocationDetailsView
                                   child: Text(
                                     "Cancel",
                                     style: CustomTextStyle(
-                                      textColor: const Color(0xffE78353),
-                                      textSize: 16,
-                                      textWeight: Constants.medium,
+                                      color: const Color(0xffE78353),
+                                      fontSize: 16,
+                                      fontWeight: Constants.medium,
                                     ),
                                   ),
                                 ),

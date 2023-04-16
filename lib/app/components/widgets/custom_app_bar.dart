@@ -27,9 +27,9 @@ AppBar customAppBar(
                     child: Text(
                       actionText,
                       style: CustomTextStyle(
-                        textColor: Kolors.highlightTextColor,
-                        textSize: 16,
-                        textWeight: Constants.bold,
+                        color: Kolors.highlightcolor,
+                        fontSize: 16,
+                        fontWeight: Constants.bold,
                       ),
                     ),
                   ),
@@ -38,8 +38,9 @@ AppBar customAppBar(
     title: Text(
       title,
       style: CustomTextStyle(
-        textSize: 18,
-        textWeight: Constants.bold,
+        fontSize: 18,
+        fontWeight: FontWeight.w700,
+        color: Kolors.primarycolor,
       ),
     ),
   );

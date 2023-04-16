@@ -35,8 +35,8 @@ class SelectTileButton extends StatelessWidget {
           child: Text(
             text,
             style: CustomTextStyle(
-              textSize: 17,
-              textWeight: FontWeight.bold,
+              fontSize: 17,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ),

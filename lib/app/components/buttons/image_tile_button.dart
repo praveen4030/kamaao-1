@@ -46,8 +46,8 @@ class ImageTileButton extends StatelessWidget {
           imageTileModel.title,
           textAlign: TextAlign.center,
           style: CustomTextStyle(
-            textWeight: FontWeight.w500,
-            textColor: Kolors.tertiaryTextColor,
+            fontWeight: FontWeight.w500,
+            color: Kolors.tertiarycolor,
           ),
         ),
         const Spacer(),

@@ -22,11 +22,11 @@ class CustomTabBarView extends StatelessWidget {
         isScrollable: false,
         padding: EdgeInsets.zero,
         controller: controller,
-        unselectedLabelColor: Kolors.tertiaryTextColor,
-        labelColor: Kolors.highlightTextColor,
-        indicatorColor: Kolors.highlightTextColor,
+        unselectedLabelColor: Kolors.tertiarycolor,
+        labelColor: Kolors.highlightcolor,
+        indicatorColor: Kolors.highlightcolor,
         labelStyle: CustomTextStyle(
-          textWeight: FontWeight.w500,
+          fontWeight: FontWeight.w500,
         ),
         tabs: tabList
             .map(

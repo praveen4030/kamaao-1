@@ -35,8 +35,8 @@ class LocationSuggestionTile extends StatelessWidget {
             Text(
               text,
               style: CustomTextStyle(
-                textColor: Kolors.secondaryTextColor,
-                textSize: 14,
+                color: Kolors.secondarycolor,
+                fontSize: 14,
               ),
             ),
           ]),

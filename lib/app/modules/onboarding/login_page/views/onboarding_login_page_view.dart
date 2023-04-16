@@ -101,9 +101,9 @@ class OnboardingLoginPageView extends GetView<OnboardingLoginPageController> {
                 ),
                 Text("+91",
                     style: CustomTextStyle(
-                        textWeight: Constants.bold,
-                        textSize: 17,
-                        textColor: Kolors.appDarkTextColor)),
+                        fontWeight: Constants.bold,
+                        fontSize: 17,
+                        color: Kolors.appDarkcolor)),
                 const SizedBox(
                   width: 5,
                 ),
@@ -122,7 +122,7 @@ class OnboardingLoginPageView extends GetView<OnboardingLoginPageController> {
                             filled: true,
                             fillColor: Kolors.fillClr,
                             hintText: 'Enter mobile number'),
-                        cursorColor: Kolors.subTittleColor,
+                        cursorColor: Kolors.secondarycolor,
                       ),
                     ),
                   ),

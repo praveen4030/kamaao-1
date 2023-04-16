@@ -51,17 +51,17 @@ class AccountProfilePageWalletPageView
             child: Text(
               "Last transactions",
               style: CustomTextStyle(
-                textColor: Kolors.secondaryTextColor,
-                textSize: 16,
-                textWeight: FontWeight.w700,
+                color: Kolors.secondarycolor,
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ),
           Text(
             "See all",
             style: CustomTextStyle(
-              textColor: Kolors.checkBoxColor,
-              textSize: 14,
+              color: Kolors.checkBoxColor,
+              fontSize: 14,
             ),
           ),
         ],

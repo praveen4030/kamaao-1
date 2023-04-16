@@ -29,18 +29,18 @@ class DetailsTile extends StatelessWidget {
                     child: Text(
                       detailsTileModel.tag,
                       style: CustomTextStyle(
-                        textColor: Kolors.highlightTextColor,
-                        textSize: 12,
-                        textWeight: FontWeight.w500,
+                        color: Kolors.highlightcolor,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
                   Text(
                     detailsTileModel.trailingText ?? "",
                     style: CustomTextStyle(
-                      textColor: Kolors.highlightTextColor,
-                      textSize: 12,
-                      textWeight: FontWeight.w500,
+                      color: Kolors.highlightcolor,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
@@ -51,9 +51,9 @@ class DetailsTile extends StatelessWidget {
                 child: Text(
                   detailsTileModel.title,
                   style: CustomTextStyle(
-                    textColor: Kolors.secondaryTextColor,
-                    textSize: 16,
-                    textWeight: FontWeight.w700,
+                    color: Kolors.secondarycolor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
@@ -63,9 +63,9 @@ class DetailsTile extends StatelessWidget {
                 child: Text(
                   detailsTileModel.subtitle,
                   style: CustomTextStyle(
-                    textColor: Kolors.tertiaryTextColor,
-                    textSize: 12,
-                    textWeight: FontWeight.w500,
+                    color: Kolors.tertiarycolor,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
@@ -77,9 +77,9 @@ class DetailsTile extends StatelessWidget {
                     child: Text(
                       detailsTileModel.subtitle2!,
                       style: CustomTextStyle(
-                        textColor: Kolors.tertiaryTextColor,
-                        textSize: 12,
-                        textWeight: FontWeight.w500,
+                        color: Kolors.tertiarycolor,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),

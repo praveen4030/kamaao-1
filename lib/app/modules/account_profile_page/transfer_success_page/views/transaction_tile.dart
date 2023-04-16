@@ -41,17 +41,17 @@ class SuccessTransactionTile extends StatelessWidget {
                     Text(
                       title,
                       style: CustomTextStyle(
-                        textColor: Kolors.secondaryTextColor,
-                        textSize: 16,
-                        textWeight: FontWeight.w500,
+                        color: Kolors.secondarycolor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                     Text(
                       description,
                       style: CustomTextStyle(
-                        textColor: Kolors.tertiaryTextColor,
-                        textSize: 12,
-                        textWeight: FontWeight.w500,
+                        color: Kolors.tertiarycolor,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   ],
@@ -61,9 +61,9 @@ class SuccessTransactionTile extends StatelessWidget {
                 Text(
                   "₹${amount!.toInt()}",
                   style: CustomTextStyle(
-                    textColor: Kolors.errorColor,
-                    textSize: 16,
-                    textWeight: FontWeight.w700,
+                    color: Kolors.errorColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
                   ),
                 )
             ]),

@@ -61,8 +61,8 @@ class AccountProfilePageTransferToBankPageView
           Text(
             "Send money from wallet to bank",
             style: CustomTextStyle(
-              textSize: 20,
-              textWeight: FontWeight.w700,
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
             ),
           ),
           const SizedBox(
@@ -71,9 +71,9 @@ class AccountProfilePageTransferToBankPageView
           Text(
             "No direct or hidden charges. Send money from your wallet to bank for free.",
             style: CustomTextStyle(
-              textColor: Kolors.tertiaryTextColor,
-              textSize: 16,
-              textWeight: FontWeight.w500,
+              color: Kolors.tertiarycolor,
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
             ),
           ),
           const SizedBox(
@@ -82,8 +82,8 @@ class AccountProfilePageTransferToBankPageView
           Text(
             "Choose bank",
             style: CustomTextStyle(
-              textSize: 16,
-              textWeight: FontWeight.w700,
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
             ),
           ),
           const SizedBox(

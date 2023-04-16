@@ -101,7 +101,7 @@ class AddDetailsStep1Form
                   icon,
                   height: 20,
                   width: 20,
-                  color: Kolors.secondaryTextColor,
+                  color: Kolors.secondarycolor,
                 ),
                 const SizedBox(
                   width: 12,
@@ -112,8 +112,8 @@ class AddDetailsStep1Form
                     child: Text(
                       text,
                       style: CustomTextStyle(
-                        textColor: Kolors.secondaryTextColor,
-                        textSize: 16,
+                        color: Kolors.secondarycolor,
+                        fontSize: 16,
                       ),
                     ),
                   ),

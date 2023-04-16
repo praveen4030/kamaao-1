@@ -41,9 +41,9 @@ class WalletHeaderBoxTile extends StatelessWidget {
               text,
               textAlign: TextAlign.center,
               style: CustomTextStyle(
-                textColor: Colors.white,
-                textSize: 11,
-                textWeight: FontWeight.w500,
+                color: Colors.white,
+                fontSize: 11,
+                fontWeight: FontWeight.w500,
               ),
             ),
             const SizedBox(height: 8),

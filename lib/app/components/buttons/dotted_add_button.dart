@@ -44,9 +44,9 @@ class DottedAddButton extends StatelessWidget {
               Text(
                 text,
                 style: CustomTextStyle(
-                  textColor: Kolors.backgroundActionColor,
-                  textSize: 16,
-                  textWeight: FontWeight.w700,
+                  color: Kolors.backgroundActionColor,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
             ],

@@ -51,8 +51,8 @@ class UserProfileDisplayView
                                     ? controller.nameChanged.value
                                     : "Full Name",
                                 style: CustomTextStyle(
-                                  textSize: 14,
-                                  textColor: Kolors.whiteColor,
+                                  fontSize: 14,
+                                  color: Kolors.whiteColor,
                                 ),
                               ),
                               const SizedBox(
@@ -61,8 +61,8 @@ class UserProfileDisplayView
                               Text(
                                 "${controller.genderSelected.value.isNotEmpty ? controller.genderSelected.value : "Gender"}, ${controller.dateOfBirth.value == null ? "Age" : (UtilFunctions.getAge(controller.dateOfBirth.value!))}",
                                 style: CustomTextStyle(
-                                  textSize: 12,
-                                  textColor: Kolors.whiteColor,
+                                  fontSize: 12,
+                                  color: Kolors.whiteColor,
                                 ),
                               )
                             ],
@@ -155,7 +155,7 @@ class UserProfileDisplayView
                                       "assets/images/png/icons/add-circle.png",
                                       height: 24,
                                       width: 24,
-                                      color: Kolors.tertiaryTextColor,
+                                      color: Kolors.tertiarycolor,
                                     ),
                                   ),
                                 ),
@@ -183,7 +183,7 @@ class UserProfileDisplayView
             icon,
             height: 16,
             width: 16,
-            color: Kolors.tertiaryTextColor,
+            color: Kolors.tertiarycolor,
           ),
           const SizedBox(
             width: 8,
@@ -191,9 +191,9 @@ class UserProfileDisplayView
           Text(
             text,
             style: CustomTextStyle(
-              textSize: 12,
-              textColor: Kolors.tertiaryTextColor,
-              textWeight: FontWeight.w500,
+              fontSize: 12,
+              color: Kolors.tertiarycolor,
+              fontWeight: FontWeight.w500,
             ),
           )
         ],

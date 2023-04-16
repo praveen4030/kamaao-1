@@ -36,9 +36,9 @@ class FaqTile extends StatelessWidget {
                         child: Text(
                           faqTileModel.title,
                           style: CustomTextStyle(
-                            textSize: 16,
-                            textWeight: FontWeight.w500,
-                            textColor: Kolors.secondaryTextColor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Kolors.secondarycolor,
                           ),
                         ),
                       ),
@@ -64,8 +64,8 @@ class FaqTile extends StatelessWidget {
                     Text(
                       faqTileModel.subtitle,
                       style: CustomTextStyle(
-                        textColor: Kolors.tertiaryTextColor,
-                        textSize: 14,
+                        color: Kolors.tertiarycolor,
+                        fontSize: 14,
                       ),
                     ),
                 ],

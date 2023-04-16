@@ -65,9 +65,9 @@ class EkycPageFaceVerificationView
             child: Text(
               "Click on Capture to take the Selfie",
               style: CustomTextStyle(
-                textColor: Kolors.successColor,
-                textSize: 16,
-                textWeight: FontWeight.w500,
+                color: Kolors.successColor,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),

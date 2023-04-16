@@ -19,9 +19,9 @@ class PrimaryButton extends StatelessWidget {
   final bool isRightArrow;
   final Color? borderColor;
   final double? borderWidth;
-  final double? textSize;
-  final Color? textColor;
-  final FontWeight? textWeight;
+  final double? fontSize;
+  final Color? color;
+  final FontWeight? fontWeight;
   final bool isEnabled;
 
   const PrimaryButton({
@@ -40,10 +40,10 @@ class PrimaryButton extends StatelessWidget {
     this.isBorder = false,
     this.isLowOpacity = false,
     this.borderColor,
-    this.textSize,
+    this.fontSize,
     this.borderWidth = 1,
-    this.textColor = Colors.white,
-    this.textWeight,
+    this.color = Colors.white,
+    this.fontWeight,
   }) : super(key: key);
 
   @override
@@ -81,9 +81,9 @@ class PrimaryButton extends StatelessWidget {
                     Text(
                       title!,
                       style: CustomTextStyle(
-                        textColor: textColor,
-                        textSize: textSize ?? 19,
-                        textWeight: textWeight ?? Constants.semiBold,
+                        color: color,
+                        fontSize: fontSize ?? 19,
+                        fontWeight: fontWeight ?? Constants.semiBold,
                       ),
                     ),
                     const SizedBox(
@@ -104,9 +104,9 @@ class PrimaryButton extends StatelessWidget {
                 child: Text(
                   title!,
                   style: CustomTextStyle(
-                    textColor: textColor,
-                    textSize: textSize ?? 16,
-                    textWeight: textWeight ?? FontWeight.w700,
+                    color: color,
+                    fontSize: fontSize ?? 16,
+                    fontWeight: fontWeight ?? FontWeight.w700,
                   ),
                 ),
               ),

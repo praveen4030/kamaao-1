@@ -39,18 +39,18 @@ class WalletHeader extends StatelessWidget {
                     Text(
                       "Total Balance",
                       style: CustomTextStyle(
-                        textColor: Colors.white,
-                        textSize: 14,
-                        textWeight: FontWeight.w500,
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                     const SizedBox(height: 8),
                     Text(
                       "5480",
                       style: CustomTextStyle(
-                        textColor: Colors.white,
-                        textSize: 18,
-                        textWeight: FontWeight.w700,
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ],
@@ -66,18 +66,18 @@ class WalletHeader extends StatelessWidget {
                     Text(
                       "Total Coins",
                       style: CustomTextStyle(
-                        textColor: Colors.white,
-                        textSize: 14,
-                        textWeight: FontWeight.w500,
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                     const SizedBox(height: 8),
                     Text(
                       "8580",
                       style: CustomTextStyle(
-                        textColor: Colors.white,
-                        textSize: 18,
-                        textWeight: FontWeight.w700,
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ],

@@ -46,8 +46,8 @@ class PaymentSettingTile extends StatelessWidget {
                   Text(
                     text,
                     style: CustomTextStyle(
-                      textSize: 16,
-                      textWeight: FontWeight.w700,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                   const Spacer(),

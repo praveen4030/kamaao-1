@@ -74,6 +74,9 @@ abstract class Routes {
       _Paths.ACCOUNT_PROFILE_PAGE +
           _Paths.ACCOUNT_PROFILE_PAGE_TRANSFER_TO_BANK_PAGE;
   static const WEB_VIEW = _Paths.WEB_VIEW;
+  static const PROJECTS_LIST_PAGE = _Paths.PROJECTS_LIST_PAGE;
+  static const PROJECT_DETAILS_PAGE = _Paths.PROJECT_DETAILS_PAGE;
+  static const REFER_PROJECTS_PAGE = _Paths.REFER_PROJECTS_PAGE;
 }
 
 abstract class _Paths {
@@ -126,4 +129,7 @@ abstract class _Paths {
   static const ACCOUNT_PROFILE_PAGE_TRANSFER_TO_BANK_PAGE =
       '/transfer-to-bank-page';
   static const WEB_VIEW = '/web-view';
+  static const PROJECTS_LIST_PAGE = '/projects-list-page';
+  static const PROJECT_DETAILS_PAGE = '/project-details-page';
+  static const REFER_PROJECTS_PAGE = '/refer-projects-page';
 }

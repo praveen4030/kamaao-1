@@ -29,9 +29,9 @@ class UploadDocumentBs extends StatelessWidget {
           Text(
             "Upload Photo",
             style: CustomTextStyle(
-              textSize: 18,
-              textWeight: FontWeight.w700,
-              textColor: Kolors.secondaryTextColor,
+              fontSize: 18,
+              fontWeight: FontWeight.w700,
+              color: Kolors.secondarycolor,
             ),
           ),
           const SizedBox(
@@ -53,9 +53,9 @@ class UploadDocumentBs extends StatelessWidget {
                 Text(
                   "Upload From Gallery",
                   style: CustomTextStyle(
-                    textSize: 16,
-                    textWeight: FontWeight.w500,
-                    textColor: Kolors.tertiaryTextColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Kolors.tertiarycolor,
                   ),
                 ),
               ],
@@ -82,9 +82,9 @@ class UploadDocumentBs extends StatelessWidget {
                 Text(
                   "Take a Photo",
                   style: CustomTextStyle(
-                    textSize: 16,
-                    textWeight: FontWeight.w500,
-                    textColor: Kolors.tertiaryTextColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Kolors.tertiarycolor,
                   ),
                 ),
                 const SizedBox(
@@ -114,9 +114,9 @@ class UploadDocumentBs extends StatelessWidget {
                   Text(
                     "Remove Photo",
                     style: CustomTextStyle(
-                      textSize: 16,
-                      textWeight: FontWeight.w500,
-                      textColor: Kolors.errorColor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Kolors.errorColor,
                     ),
                   ),
                   const SizedBox(

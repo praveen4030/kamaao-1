@@ -19,8 +19,8 @@ class HeaderWidget extends StatelessWidget {
           child: Text(
             text,
             style: CustomTextStyle(
-              textSize: 22,
-              textWeight: Constants.bold,
+              fontSize: 22,
+              fontWeight: Constants.bold,
             ),
           ),
         ),

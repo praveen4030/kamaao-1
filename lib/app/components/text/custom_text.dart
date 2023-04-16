@@ -3,10 +3,14 @@ import 'package:kamao/app/theme/colors.dart';
 import 'package:kamao/app/utils/constants.dart';
 
 class CustomTextStyle extends TextStyle {
-  final Color? textColor;
-  final FontWeight? textWeight;
-  final double? textSize;
-  final String? textFamily;
+  @override
+  final Color? color;
+  @override
+  final FontWeight? fontWeight;
+  @override
+  final double? fontSize;
+  @override
+  final String? fontFamily;
   final TextDecoration? textDecorations;
   final Paint? textBackground;
   final double? textLetterSpacing;
@@ -15,19 +19,19 @@ class CustomTextStyle extends TextStyle {
 
   CustomTextStyle({
     this.textHeight,
-    this.textColor,
-    this.textWeight = FontWeight.normal,
-    this.textSize = 14,
-    this.textFamily = Constants.fontFamily,
+    this.color,
+    this.fontWeight = FontWeight.normal,
+    this.fontSize = 14,
+    this.fontFamily = Constants.fontFamily,
     this.textDecorations = TextDecoration.none,
     this.textBackground,
     this.textLetterSpacing = 0.0,
     this.textStyle = FontStyle.normal,
   }) : super(
-          color: textColor ?? Kolors.appDarkTextColor,
-          fontWeight: textWeight,
-          fontSize: textSize,
-          fontFamily: textFamily,
+          color: color ?? Kolors.primarycolor,
+          fontWeight: fontWeight,
+          fontSize: fontSize,
+          fontFamily: fontFamily,
           decoration: textDecorations,
           background: textBackground,
           letterSpacing: textLetterSpacing,

@@ -18,44 +18,46 @@ class AccountProfilePageView extends GetView<AccountProfilePageController> {
       length: 2,
       child: Scaffold(
         appBar: customAppBar(title: "Account"),
-        body: NestedScrollView(headerSliverBuilder:
-            (BuildContext context, bool innerBoxIsScrolled) {
-          return <Widget>[
-            const SliverToBoxAdapter(
-              child: AccountProfileHeader(),
-            ),
-            SliverAppBar(
-              leadingWidth: 0,
-              elevation: 0.0,
-              leading: const SizedBox(),
-              pinned: true,
-              floating: false,
-              toolbarHeight: 51,
-              flexibleSpace: FlexibleSpaceBar(
-                  // collapseMode: CollapseMode.parallax,
-                  background: CustomTabBarView(
-                controller: controller.tabController,
-                tabList: const [
-                  "Profile",
-                  "Settings",
-                ],
-              )),
-            ),
-          ];
-        }, body: Builder(
-          builder: (context) {
-            return Container(
-              color: Kolors.backgroundSecondary,
-              child: TabBarView(
-                controller: controller.tabController,
-                children: const [
-                  ProfileListPage(),
-                  AccountSettingsPage(),
-                ],
+        body: NestedScrollView(
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+            return <Widget>[
+              const SliverToBoxAdapter(
+                child: AccountProfileHeader(),
               ),
-            );
+              SliverAppBar(
+                leadingWidth: 0,
+                elevation: 0.0,
+                leading: const SizedBox(),
+                pinned: true,
+                floating: false,
+                toolbarHeight: 51,
+                flexibleSpace: FlexibleSpaceBar(
+                    // collapseMode: CollapseMode.parallax,
+                    background: CustomTabBarView(
+                  controller: controller.tabController,
+                  tabList: const [
+                    "Profile",
+                    "Settings",
+                  ],
+                )),
+              ),
+            ];
           },
-        )),
+          body: Builder(
+            builder: (context) {
+              return Container(
+                color: Kolors.backgroundSecondary,
+                child: TabBarView(
+                  controller: controller.tabController,
+                  children: const [
+                    ProfileListPage(),
+                    AccountSettingsPage(),
+                  ],
+                ),
+              );
+            },
+          ),
+        ),
       ),
     );
   }

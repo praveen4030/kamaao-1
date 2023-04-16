@@ -35,9 +35,9 @@ class DetailsSafeWidget extends StatelessWidget {
             Text(
               "Your information is 100% safe with us",
               style: CustomTextStyle(
-                textColor: Kolors.foundationBlue,
-                textSize: 12,
-                textWeight: FontWeight.w500,
+                color: Kolors.foundationBlue,
+                fontSize: 12,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ],

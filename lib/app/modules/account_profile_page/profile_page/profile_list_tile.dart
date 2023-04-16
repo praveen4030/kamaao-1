@@ -64,9 +64,9 @@ class ProfileListTile extends StatelessWidget {
                                 Text(
                                   profileTileModel.text,
                                   style: CustomTextStyle(
-                                    textColor: Kolors.secondaryTextColor,
-                                    textSize: 16,
-                                    textWeight: Constants.medium,
+                                    color: Kolors.secondarycolor,
+                                    fontSize: 16,
+                                    fontWeight: Constants.medium,
                                   ),
                                 ),
                                 const SizedBox(
@@ -87,9 +87,9 @@ class ProfileListTile extends StatelessWidget {
                                     child: Text(
                                       profileTileModel.tag.toUpperCase(),
                                       style: CustomTextStyle(
-                                        textColor: Kolors.errorColor,
-                                        textSize: 10,
-                                        textWeight: FontWeight.w700,
+                                        color: Kolors.errorColor,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w700,
                                       ),
                                     ),
                                   )
@@ -101,9 +101,9 @@ class ProfileListTile extends StatelessWidget {
                             Text(
                               "${profileTileModel.completed.toInt()}% completed",
                               style: CustomTextStyle(
-                                textColor: Kolors.tertiaryTextColor,
-                                textSize: 12,
-                                textWeight: Constants.medium,
+                                color: Kolors.tertiarycolor,
+                                fontSize: 12,
+                                fontWeight: Constants.medium,
                               ),
                             ),
                             const SizedBox(
@@ -115,7 +115,7 @@ class ProfileListTile extends StatelessWidget {
                               barRadius: const Radius.circular(37),
                               percent: profileTileModel.completed / 100,
                               backgroundColor: Kolors.backgroundInterfaceColor,
-                              progressColor: Kolors.highlightTextColor,
+                              progressColor: Kolors.highlightcolor,
                             ),
                           ],
                         ),

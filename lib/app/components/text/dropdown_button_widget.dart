@@ -33,8 +33,8 @@ class DropdownButtonWidget extends StatelessWidget {
         ),
         hintText: hint,
         hintStyle: CustomTextStyle(
-          textSize: 16,
-          textColor: Kolors.tertiaryTextColor,
+          fontSize: 16,
+          color: Kolors.tertiarycolor,
         ),
         suffixIcon: SizedBox(
           width: 20,
@@ -44,7 +44,7 @@ class DropdownButtonWidget extends StatelessWidget {
               "assets/images/png/icons/arrow-up.png",
               width: 20,
               height: 20,
-              color: Kolors.tertiaryTextColor,
+              color: Kolors.tertiarycolor,
             ),
           ),
         ),
@@ -56,7 +56,7 @@ class DropdownButtonWidget extends StatelessWidget {
               icon,
               width: 20,
               height: 20,
-              color: Kolors.tertiaryTextColor,
+              color: Kolors.tertiarycolor,
             ),
           ),
         ),
@@ -83,7 +83,7 @@ class DropdownButtonWidget extends StatelessWidget {
               Text(
                 item,
                 style: CustomTextStyle(
-                  textSize: 14,
+                  fontSize: 14,
                 ),
               ),
             ],

@@ -56,9 +56,9 @@ class ImageUploadTileButton extends StatelessWidget {
                     child: Text(
                       imageUploadTileModel.title,
                       style: CustomTextStyle(
-                        textSize: 16,
-                        textWeight: FontWeight.w500,
-                        textColor: Kolors.primaryTextColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Kolors.primarycolor,
                       ),
                     ),
                   ),
@@ -166,9 +166,9 @@ class ImageUploadTileButton extends StatelessWidget {
             Text(
               isFront ? "Front Side" : "Back Side",
               style: CustomTextStyle(
-                textSize: 10,
-                textWeight: FontWeight.w500,
-                textColor: Kolors.tertiaryTextColor,
+                fontSize: 10,
+                fontWeight: FontWeight.w500,
+                color: Kolors.tertiarycolor,
               ),
             ),
             Row(
@@ -177,9 +177,9 @@ class ImageUploadTileButton extends StatelessWidget {
                   child: Text(
                     "img123.png",
                     style: CustomTextStyle(
-                      textSize: 12,
-                      textWeight: FontWeight.w500,
-                      textColor: Kolors.highlightTextColor,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      color: Kolors.highlightcolor,
                     ),
                   ),
                 ),

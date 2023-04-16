@@ -37,16 +37,16 @@ class TextFieldWidget extends StatelessWidget {
             if (onChanged != null) onChanged!(value);
           },
           style: CustomTextStyle(
-            textColor: Kolors.secondaryTextColor,
-            textSize: 16,
+            color: Kolors.secondarycolor,
+            fontSize: 16,
           ),
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.all(15),
             labelText: hint,
             fillColor: isDisabledBox ? Kolors.seperatorLight : Colors.white,
             labelStyle: CustomTextStyle(
-              textColor: Kolors.tertiaryTextColor,
-              textSize: 16,
+              color: Kolors.tertiarycolor,
+              fontSize: 16,
             ),
             hintText: hint,
             prefixIcon: prefixIcon == null
@@ -59,13 +59,13 @@ class TextFieldWidget extends StatelessWidget {
                         prefixIcon!,
                         width: 24,
                         height: 24,
-                        color: Kolors.tertiaryTextColor,
+                        color: Kolors.tertiarycolor,
                       ),
                     ),
                   ),
             hintStyle: CustomTextStyle(
-              textColor: Kolors.tertiaryTextColor,
-              textSize: 16,
+              color: Kolors.tertiarycolor,
+              fontSize: 16,
             ),
             border: OutlineInputBorder(
               borderSide: BorderSide(color: Kolors.seperatorDark, width: 1),

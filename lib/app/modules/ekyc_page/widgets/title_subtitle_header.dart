@@ -25,9 +25,9 @@ class TitleSubtitleHeader extends StatelessWidget {
             child: Text(
               title,
               style: CustomTextStyle(
-                textColor: Kolors.secondaryTextColor,
-                textSize: 24,
-                textWeight: Constants.bold,
+                color: Kolors.secondarycolor,
+                fontSize: 24,
+                fontWeight: Constants.bold,
               ),
             ),
           ),
@@ -42,9 +42,9 @@ class TitleSubtitleHeader extends StatelessWidget {
             child: Text(
               subtitle,
               style: CustomTextStyle(
-                textColor: Kolors.tertiaryTextColor,
-                textSize: 16,
-                textWeight: FontWeight.w500,
+                color: Kolors.tertiarycolor,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),

@@ -1,23 +1,18 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BasePageController extends GetxController {
-  //TODO: Implement BasePageController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  RxInt pageIndex = 0.obs;
+  final PageController pagecontroller = PageController();
+  void onTap(int pageIndex) {
+    pagecontroller.animateToPage(
+      pageIndex,
+      duration: const Duration(microseconds: 200),
+      curve: Curves.linear,
+    );
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  void onPageChanged(int index) {
+    pageIndex.value = index;
   }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

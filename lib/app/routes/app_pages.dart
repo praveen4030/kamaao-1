@@ -70,8 +70,14 @@ import '../modules/onboarding/otp_page/bindings/onboarding_otp_page_binding.dart
 import '../modules/onboarding/otp_page/views/onboarding_otp_page_view.dart';
 import '../modules/onboarding/select_language_page/bindings/onboarding_select_language_page_binding.dart';
 import '../modules/onboarding/select_language_page/views/onboarding_select_language_page_view.dart';
+import '../modules/project_details_page/bindings/project_details_page_binding.dart';
+import '../modules/project_details_page/views/project_details_page_view.dart';
 import '../modules/project_page/bindings/project_page_binding.dart';
 import '../modules/project_page/views/project_page_view.dart';
+import '../modules/projects_list_page/bindings/projects_list_page_binding.dart';
+import '../modules/projects_list_page/views/projects_list_page_view.dart';
+import '../modules/refer_projects_page/bindings/refer_projects_page_binding.dart';
+import '../modules/refer_projects_page/views/refer_projects_page_view.dart';
 import '../modules/splash_page/bindings/splash_page_binding.dart';
 import '../modules/splash_page/views/splash_page_view.dart';
 import '../modules/web_view/bindings/web_view_binding.dart';
@@ -82,7 +88,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.ONBOARDING_SELECT_LANGUAGE_PAGE;
+  static const INITIAL = Routes.BASE_PAGE;
 
   static final routes = [
     GetPage(
@@ -275,6 +281,21 @@ class AppPages {
       name: _Paths.WEB_VIEW,
       page: () => const WebViewView(),
       binding: WebViewBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROJECTS_LIST_PAGE,
+      page: () => const ProjectsListPageView(),
+      binding: ProjectsListPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROJECT_DETAILS_PAGE,
+      page: () => const ProjectDetailsPageView(),
+      binding: ProjectDetailsPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.REFER_PROJECTS_PAGE,
+      page: () => const ReferProjectsPageView(),
+      binding: ReferProjectsPageBinding(),
     ),
   ];
 }

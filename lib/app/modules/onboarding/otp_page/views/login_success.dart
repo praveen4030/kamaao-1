@@ -22,8 +22,8 @@ class LoginSuccess extends StatelessWidget {
               Text(
                 "Login Successful!",
                 style: CustomTextStyle(
-                  textWeight: FontWeight.w700,
-                  textSize: 20,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
                 ),
               ),
             ],

@@ -62,9 +62,9 @@ class UploadDocumentButton extends StatelessWidget {
               Text(
                 text,
                 style: CustomTextStyle(
-                  textColor: Kolors.backgroundActionColor,
-                  textSize: 10,
-                  textWeight: FontWeight.bold,
+                  color: Kolors.backgroundActionColor,
+                  fontSize: 10,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ],

@@ -43,9 +43,9 @@ class WalletTransactionTile extends StatelessWidget {
                           child: Text(
                             transactionModel.title,
                             style: CustomTextStyle(
-                              textColor: Kolors.secondaryTextColor,
-                              textSize: 14,
-                              textWeight: FontWeight.w500,
+                              color: Kolors.secondarycolor,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),
@@ -53,15 +53,15 @@ class WalletTransactionTile extends StatelessWidget {
                         Text(
                           "${transactionModel.transactionType == TransactionType.debit ? "-" : "+"}₹${transactionModel.amount.toInt()}",
                           style: CustomTextStyle(
-                            textColor: transactionModel.transactionType ==
+                            color: transactionModel.transactionType ==
                                     TransactionType.debit
                                 ? Kolors.errorColor
                                 : transactionModel.transactionType ==
                                         TransactionType.coins
                                     ? Kolors.foundationYellow
                                     : Kolors.successColor,
-                            textSize: 14,
-                            textWeight: FontWeight.w500,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ],
@@ -73,8 +73,8 @@ class WalletTransactionTile extends StatelessWidget {
                             transactionModel.dateTime,
                           ),
                           style: CustomTextStyle(
-                            textColor: Kolors.tertiaryTextColor,
-                            textSize: 12,
+                            color: Kolors.tertiarycolor,
+                            fontSize: 12,
                           ),
                         ),
                         const Spacer(),
@@ -82,8 +82,8 @@ class WalletTransactionTile extends StatelessWidget {
                           Text(
                             "From Wallet",
                             style: CustomTextStyle(
-                              textColor: Kolors.tertiaryTextColor,
-                              textSize: 12,
+                              color: Kolors.tertiarycolor,
+                              fontSize: 12,
                             ),
                           ),
                       ],

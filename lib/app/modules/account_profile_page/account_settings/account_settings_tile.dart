@@ -48,9 +48,9 @@ class AccountSettingsTile extends StatelessWidget {
               child: Text(
                 accountSettingsModel.text,
                 style: CustomTextStyle(
-                  textColor: Kolors.primaryTextColor,
-                  textSize: 16,
-                  textWeight: Constants.medium,
+                  color: Kolors.primarycolor,
+                  fontSize: 16,
+                  fontWeight: Constants.medium,
                 ),
               ),
             ),

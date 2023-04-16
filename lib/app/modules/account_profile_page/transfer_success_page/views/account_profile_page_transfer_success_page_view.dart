@@ -37,8 +37,8 @@ class AccountProfilePageTransferSuccessPageView
                     child: Text(
                       "₹500",
                       style: CustomTextStyle(
-                        textSize: 24,
-                        textWeight: FontWeight.w700,
+                        fontSize: 24,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
@@ -48,9 +48,9 @@ class AccountProfilePageTransferSuccessPageView
                     child: Text(
                       "Transfer to bank",
                       style: CustomTextStyle(
-                        textColor: Kolors.secondaryTextColor,
-                        textSize: 18,
-                        textWeight: FontWeight.w700,
+                        color: Kolors.secondarycolor,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
@@ -60,8 +60,8 @@ class AccountProfilePageTransferSuccessPageView
                     child: Text(
                       "Your money successfully transfer.",
                       style: CustomTextStyle(
-                        textColor: Kolors.tertiaryTextColor,
-                        textSize: 14,
+                        color: Kolors.tertiarycolor,
+                        fontSize: 14,
                       ),
                     ),
                   ),
@@ -78,8 +78,8 @@ class AccountProfilePageTransferSuccessPageView
                     child: Text(
                       "Credited To",
                       style: CustomTextStyle(
-                        textSize: 16,
-                        textWeight: Constants.bold,
+                        fontSize: 16,
+                        fontWeight: Constants.bold,
                       ),
                     ),
                   ),
@@ -95,8 +95,8 @@ class AccountProfilePageTransferSuccessPageView
                     child: Text(
                       "Transaction ID",
                       style: CustomTextStyle(
-                        textSize: 16,
-                        textWeight: Constants.bold,
+                        fontSize: 16,
+                        fontWeight: Constants.bold,
                       ),
                     ),
                   ),
@@ -132,9 +132,9 @@ class AccountProfilePageTransferSuccessPageView
             Text(
               "225896315458",
               style: CustomTextStyle(
-                textColor: Kolors.secondaryTextColor,
-                textSize: 16,
-                textWeight: FontWeight.w500,
+                color: Kolors.secondarycolor,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
               ),
             ),
             const Spacer(
@@ -143,9 +143,9 @@ class AccountProfilePageTransferSuccessPageView
             Text(
               "Copy",
               style: CustomTextStyle(
-                textColor: Kolors.textInfo,
-                textSize: 16,
-                textWeight: FontWeight.w700,
+                color: Kolors.textInfo,
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ],

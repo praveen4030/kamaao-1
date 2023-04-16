@@ -71,9 +71,9 @@ class EkycPageView extends GetView<EkycPageController> {
             child: Text(
               text,
               style: CustomTextStyle(
-                textWeight: FontWeight.w700,
-                textSize: 16,
-                textColor: Kolors.tertiaryTextColor,
+                fontWeight: FontWeight.w700,
+                fontSize: 16,
+                color: Kolors.tertiarycolor,
               ),
             ),
           ),

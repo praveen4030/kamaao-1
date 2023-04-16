@@ -34,9 +34,9 @@ class EkycPageEkycVerificationPendingView
               Text(
                 "Kyc Verification Sending",
                 style: CustomTextStyle(
-                  textColor: Kolors.foundationYellow,
-                  textSize: 16,
-                  textWeight: FontWeight.w700,
+                  color: Kolors.foundationYellow,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
               const SizedBox(
@@ -47,9 +47,9 @@ class EkycPageEkycVerificationPendingView
                 child: Text(
                   "We couldn/’t process your verification due to some improper \n                                    / cross verification delays.",
                   style: CustomTextStyle(
-                    textColor: Kolors.tertiaryTextColor,
-                    textSize: 12,
-                    textWeight: FontWeight.w500,
+                    color: Kolors.tertiarycolor,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
@@ -70,9 +70,9 @@ class EkycPageEkycVerificationPendingView
                   child: Text(
                     "Skip",
                     style: CustomTextStyle(
-                      textColor: Kolors.highlightTextColor,
-                      textSize: 16,
-                      textWeight: FontWeight.w700,
+                      color: Kolors.highlightcolor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                 ),

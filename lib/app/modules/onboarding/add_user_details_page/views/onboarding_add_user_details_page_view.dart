@@ -32,17 +32,17 @@ class OnboardingAddUserDetailsPageView
                 Text(
                   "Add Details",
                   style: CustomTextStyle(
-                    textSize: 24,
-                    textWeight: FontWeight.w700,
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
                 const SizedBox(height: 12),
                 Text(
                   "Create Your Kamaao Job Card",
                   style: CustomTextStyle(
-                    textSize: 16,
-                    textWeight: FontWeight.w500,
-                    textColor: Kolors.appTextColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Kolors.tertiarycolor,
                   ),
                 ),
                 const SizedBox(height: 16),
