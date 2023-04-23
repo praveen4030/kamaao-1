@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kamao/app/modules/job_page/models/filter_model.dart';
@@ -13,6 +14,7 @@ class JobPageController extends GetxController {
   List<FiltersListModel> filtersList = [];
   List<FilterModel> primaryFiltersList = [];
   RxList<FilterModel> appliedFiltersList = RxList.empty(growable: true);
+  CarouselController imageController = CarouselController();
   @override
   void onInit() {
     super.onInit();

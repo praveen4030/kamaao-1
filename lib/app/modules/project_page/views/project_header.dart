@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kamao/app/modules/base_page/views/common_app_bar.dart';
@@ -69,11 +70,36 @@ class ProjectHeader extends GetView<ProjectPageController> {
           const SizedBox(
             height: 16,
           ),
-          HeaderBannerTile(
-            title: "Install 5 more apps & get extra reward",
-            image: "extra_rewards",
-            buttonText: "Explore",
-            onTap: () {},
+          CarouselSlider(
+            options: CarouselOptions(
+              height: 148,
+              viewportFraction: 1.0,
+              autoPlay: true,
+              enableInfiniteScroll: true,
+              scrollPhysics: const BouncingScrollPhysics(),
+              onPageChanged: (index, reason) {
+                controller.currentSlide.value = index;
+                controller.update();
+              },
+              scrollDirection: Axis.horizontal,
+              onScrolled: (value) {
+                value = 1;
+                controller.update();
+              },
+            ),
+            carouselController: controller.imageController,
+            items: ['', '', ''].map((model) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return HeaderBannerTile(
+                    title: "Install 5 more apps & get extra reward",
+                    image: "extra_rewards",
+                    buttonText: "Explore",
+                    onTap: () {},
+                  );
+                },
+              );
+            }).toList(),
           ),
           const SizedBox(
             height: 8,

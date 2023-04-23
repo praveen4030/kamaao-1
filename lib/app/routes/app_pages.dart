@@ -98,6 +98,8 @@ import '../modules/similar_jobs_page/bindings/similar_jobs_page_binding.dart';
 import '../modules/similar_jobs_page/views/similar_jobs_page_view.dart';
 import '../modules/splash_page/bindings/splash_page_binding.dart';
 import '../modules/splash_page/views/splash_page_view.dart';
+import '../modules/store_page/bindings/store_page_binding.dart';
+import '../modules/store_page/views/store_page_view.dart';
 import '../modules/web_view/bindings/web_view_binding.dart';
 import '../modules/web_view/views/web_view_view.dart';
 
@@ -359,6 +361,11 @@ class AppPages {
       name: _Paths.NOTIFICATION_SETTINGS_PAGE,
       page: () => const NotificationSettingsPageView(),
       binding: NotificationSettingsPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.STORE_PAGE,
+      page: () => const StorePageView(),
+      binding: StorePageBinding(),
     ),
   ];
 }

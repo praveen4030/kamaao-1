@@ -5,6 +5,7 @@ class BasePageController extends GetxController {
   RxInt pageIndex = 0.obs;
   final PageController pagecontroller = PageController();
   void onTap(int pageIndex) {
+    onPageChanged(pageIndex);
     pagecontroller.animateToPage(
       pageIndex,
       duration: const Duration(microseconds: 200),

@@ -87,6 +87,7 @@ abstract class Routes {
   static const JOB_QUESTIONS_PAGE = _Paths.JOB_QUESTIONS_PAGE;
   static const NOTIFICATION_PAGE = _Paths.NOTIFICATION_PAGE;
   static const NOTIFICATION_SETTINGS_PAGE = _Paths.NOTIFICATION_SETTINGS_PAGE;
+  static const STORE_PAGE = _Paths.STORE_PAGE;
 }
 
 abstract class _Paths {
@@ -152,4 +153,5 @@ abstract class _Paths {
   static const JOB_QUESTIONS_PAGE = '/job-questions-page';
   static const NOTIFICATION_PAGE = '/notification-page';
   static const NOTIFICATION_SETTINGS_PAGE = '/notification-settings-page';
+  static const STORE_PAGE = '/store-page';
 }

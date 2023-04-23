@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kamao/app/modules/job_page/models/job_model.dart';
@@ -11,6 +12,7 @@ class ProjectPageController extends GetxController {
   RxInt currentSlide = 0.obs;
   List<ProjectModel> projectTilesList = [];
   List<MilestoneModel> milestonesList = [];
+  CarouselController imageController = CarouselController();
 
   @override
   void onInit() {

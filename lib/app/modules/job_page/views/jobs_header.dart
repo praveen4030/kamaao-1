@@ -1,3 +1,6 @@
+import 'dart:ffi';
+
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kamao/app/components/bottom_sheet/custom_bs.dart';
@@ -36,11 +39,36 @@ class JobsHeader extends GetView<JobPageController> {
           const SizedBox(
             height: 16,
           ),
-          Image.asset(
-            'assets/images/png/urgent_hiring.png',
-            height: 148,
-            fit: BoxFit.fill,
-            width: Get.width,
+          CarouselSlider(
+            options: CarouselOptions(
+              height: 148,
+              viewportFraction: 1.0,
+              autoPlay: true,
+              enableInfiniteScroll: true,
+              scrollPhysics: const BouncingScrollPhysics(),
+              onPageChanged: (index, reason) {
+                controller.currentSlide.value = index;
+                controller.update();
+              },
+              scrollDirection: Axis.horizontal,
+              onScrolled: (value) {
+                value = 1;
+                controller.update();
+              },
+            ),
+            carouselController: controller.imageController,
+            items: ['', '', ''].map((model) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return Image.asset(
+                    'assets/images/png/urgent_hiring.png',
+                    height: 148,
+                    fit: BoxFit.fill,
+                    width: Get.width,
+                  );
+                },
+              );
+            }).toList(),
           ),
           const SizedBox(
             height: 8,
