@@ -20,7 +20,35 @@ class ProjectDetailsPageView extends GetView<ProjectDetailsPageController> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        appBar: customAppBar(title: "Project Details"),
+        appBar: customAppBar(
+          title: "Project Details",
+          actionWidget: Row(
+            children: [
+              InkWell(
+                onTap: () {},
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 12),
+                  child: Image.asset(
+                    'assets/images/png/icons/bookmark.png',
+                    height: 24,
+                    width: 24,
+                  ),
+                ),
+              ),
+              InkWell(
+                onTap: () {},
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: Image.asset(
+                    'assets/images/png/icons/forward.png',
+                    height: 24,
+                    width: 24,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
         body: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
@@ -65,6 +93,7 @@ class ProjectDetailsPageView extends GetView<ProjectDetailsPageController> {
           body: Builder(
             builder: (context) {
               return Container(
+                padding: const EdgeInsets.only(bottom: 100),
                 color: Kolors.backgroundSecondary,
                 child: TabBarView(
                   controller: controller.tabController,

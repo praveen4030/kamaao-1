@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:kamao/app/components/bottom_sheet/custom_bs.dart';
+import 'package:kamao/app/modules/base_page/views/telegram_share_bs.dart';
+import 'package:kamao/app/routes/app_pages.dart';
 
 class CommonBasePageAppBar extends StatelessWidget {
   const CommonBasePageAppBar({Key? key}) : super(key: key);
@@ -8,11 +12,15 @@ class CommonBasePageAppBar extends StatelessWidget {
     return Row(children: [
       Image.asset("assets/images/profile.png"),
       const Spacer(),
-      icon("assets/images/png/icons/telegram.png", () {}),
+      icon("assets/images/png/icons/telegram.png", () {
+        showCustomBottomSheet(child: const TelegramShareBs());
+      }),
       const SizedBox(width: 12),
       icon("assets/images/png/icons/message-question.png", () {}),
       const SizedBox(width: 12),
-      icon("assets/images/png/icons/notification.png", () {}),
+      icon("assets/images/png/icons/notification.png", () {
+        Get.toNamed(Routes.NOTIFICATION_PAGE);
+      }),
     ]);
   }
 

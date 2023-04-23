@@ -7,6 +7,12 @@ class BorderButton extends StatelessWidget {
   final Color color;
   final String? icon;
   final Color? bgColor;
+  final double borderRadius;
+  final Color? textColor;
+  final double? height;
+  final double borderWidth;
+  final double verticalPadding;
+  final String? prefixImage;
   const BorderButton({
     Key? key,
     required this.text,
@@ -14,6 +20,12 @@ class BorderButton extends StatelessWidget {
     required this.color,
     this.bgColor,
     this.icon,
+    this.borderRadius = 48,
+    this.textColor,
+    this.height,
+    this.borderWidth = 1,
+    this.verticalPadding = 10,
+    this.prefixImage,
   }) : super(key: key);
 
   @override
@@ -23,19 +35,31 @@ class BorderButton extends StatelessWidget {
         onTap();
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 18),
+        height: height,
+        padding:
+            EdgeInsets.symmetric(vertical: verticalPadding, horizontal: 18),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(48),
-          border: Border.all(color: color),
+          borderRadius: BorderRadius.circular(borderRadius),
+          border: Border.all(color: color, width: borderWidth),
           color: bgColor,
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            if (prefixImage?.isNotEmpty ?? false)
+              Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: Image.asset(
+                  prefixImage!,
+                  height: 20,
+                  width: 20,
+                ),
+              ),
             Text(
               text,
               style: CustomTextStyle(
-                color: color,
+                color: textColor ?? color,
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
               ),

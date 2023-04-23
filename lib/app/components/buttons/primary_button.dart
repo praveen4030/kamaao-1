@@ -16,13 +16,13 @@ class PrimaryButton extends StatelessWidget {
   final bool isGradient;
   final bool isLowOpacity;
   final bool isSmallButton;
-  final bool isRightArrow;
   final Color? borderColor;
   final double? borderWidth;
   final double? fontSize;
   final Color? color;
   final FontWeight? fontWeight;
   final bool isEnabled;
+  final String? icon;
 
   const PrimaryButton({
     Key? key,
@@ -33,7 +33,6 @@ class PrimaryButton extends StatelessWidget {
     this.height,
     this.width,
     this.isWidth = false,
-    this.isRightArrow = false,
     this.isGradient = false,
     this.isSmallButton = false,
     this.buttonColor,
@@ -44,6 +43,7 @@ class PrimaryButton extends StatelessWidget {
     this.borderWidth = 1,
     this.color = Colors.white,
     this.fontWeight,
+    this.icon,
   }) : super(key: key);
 
   @override
@@ -73,43 +73,30 @@ class PrimaryButton extends StatelessWidget {
                   color: borderColor ?? Kolors.blackColor, width: borderWidth!)
               : null,
         ),
-        child: isRightArrow
-            ? Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      title!,
-                      style: CustomTextStyle(
-                        color: color,
-                        fontSize: fontSize ?? 19,
-                        fontWeight: fontWeight ?? Constants.semiBold,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 4,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 5),
-                      child: Image.asset(
-                        ImagePath.arrowRight,
-                        height: 20,
-                        width: 20,
-                      ),
-                    )
-                  ],
-                ),
-              )
-            : Center(
-                child: Text(
-                  title!,
-                  style: CustomTextStyle(
-                    color: color,
-                    fontSize: fontSize ?? 16,
-                    fontWeight: fontWeight ?? FontWeight.w700,
-                  ),
+        child: Center(
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                title!,
+                style: CustomTextStyle(
+                  color: color,
+                  fontSize: fontSize ?? 16,
+                  fontWeight: fontWeight ?? FontWeight.w700,
                 ),
               ),
+              if (icon != null)
+                Padding(
+                  padding: const EdgeInsets.only(left: 8),
+                  child: Image.asset(
+                    icon!,
+                    height: 20,
+                    width: 20,
+                  ),
+                ),
+            ],
+          ),
+        ),
       ),
     );
   }

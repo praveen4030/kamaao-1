@@ -27,7 +27,7 @@ Future<void> showCustomBottomSheet({
   ).then(
     (value) {
       if (onDismiss == null) return;
-      onDismiss();
+      onDismiss(value);
     },
   );
 }

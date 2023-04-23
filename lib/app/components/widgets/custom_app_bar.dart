@@ -8,10 +8,12 @@ AppBar customAppBar(
     {required String title,
     String? actionText,
     Function()? onTapAction,
+    Widget? leadingWidget,
     Widget? actionWidget}) {
   return AppBar(
     elevation: 0.5,
     centerTitle: true,
+    leading: leadingWidget,
     actions: [
       actionWidget ??
           (actionText == null

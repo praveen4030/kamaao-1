@@ -77,6 +77,16 @@ abstract class Routes {
   static const PROJECTS_LIST_PAGE = _Paths.PROJECTS_LIST_PAGE;
   static const PROJECT_DETAILS_PAGE = _Paths.PROJECT_DETAILS_PAGE;
   static const REFER_PROJECTS_PAGE = _Paths.REFER_PROJECTS_PAGE;
+  static const REFER_PROJECTS_SEND_INVITE_PAGE =
+      _Paths.REFER_PROJECTS_SEND_INVITE_PAGE;
+  static const JOBS_LIST_PAGE = _Paths.JOBS_LIST_PAGE;
+  static const JOB_DETAILS_PAGE = _Paths.JOB_DETAILS_PAGE;
+  static const APPLICATION_REJECTED_PAGE = _Paths.APPLICATION_REJECTED_PAGE;
+  static const APPLICATION_SUCCESS_PAGE = _Paths.APPLICATION_SUCCESS_PAGE;
+  static const SIMILAR_JOBS_PAGE = _Paths.SIMILAR_JOBS_PAGE;
+  static const JOB_QUESTIONS_PAGE = _Paths.JOB_QUESTIONS_PAGE;
+  static const NOTIFICATION_PAGE = _Paths.NOTIFICATION_PAGE;
+  static const NOTIFICATION_SETTINGS_PAGE = _Paths.NOTIFICATION_SETTINGS_PAGE;
 }
 
 abstract class _Paths {
@@ -132,4 +142,14 @@ abstract class _Paths {
   static const PROJECTS_LIST_PAGE = '/projects-list-page';
   static const PROJECT_DETAILS_PAGE = '/project-details-page';
   static const REFER_PROJECTS_PAGE = '/refer-projects-page';
+  static const REFER_PROJECTS_SEND_INVITE_PAGE =
+      '/refer-projects-send-invite-page';
+  static const JOBS_LIST_PAGE = '/jobs-list-page';
+  static const JOB_DETAILS_PAGE = '/job-details-page';
+  static const APPLICATION_REJECTED_PAGE = '/application-rejected-page';
+  static const APPLICATION_SUCCESS_PAGE = '/application-success-page';
+  static const SIMILAR_JOBS_PAGE = '/similar-jobs-page';
+  static const JOB_QUESTIONS_PAGE = '/job-questions-page';
+  static const NOTIFICATION_PAGE = '/notification-page';
+  static const NOTIFICATION_SETTINGS_PAGE = '/notification-settings-page';
 }

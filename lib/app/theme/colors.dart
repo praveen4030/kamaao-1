@@ -66,6 +66,8 @@ class Kolors {
   static Color successColor = const Color(0xFF33B96B);
   static Color foundationBlue = const Color(0xFF4852D4);
   static Color foundationLightBlue = const Color(0xFFE5E7FF);
+  static Color foundationDarkBlue = const Color(0xFF767DDF);
+
   static Color foundationYellow = const Color(0xFFF0B428);
   static Color errorColor = const Color(0xFFFF3F3F);
   static Color boxShadowColor = const Color(0xFFE16122);
@@ -77,4 +79,5 @@ class Kolors {
 
   static const Color dividerColor = Color(0xffDDDDDD);
   static const Color foundationOrange = Color(0xffFFF5EF);
+  static const Color searchBgColor = Color(0xffF7F8F9);
 }

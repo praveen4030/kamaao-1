@@ -36,6 +36,10 @@ import '../modules/account_profile_page/upi_id_page/views/account_profile_page_u
 import '../modules/account_profile_page/views/account_profile_page_view.dart';
 import '../modules/account_profile_page/wallet_page/bindings/account_profile_page_wallet_page_binding.dart';
 import '../modules/account_profile_page/wallet_page/views/account_profile_page_wallet_page_view.dart';
+import '../modules/application_rejected_page/bindings/application_rejected_page_binding.dart';
+import '../modules/application_rejected_page/views/application_rejected_page_view.dart';
+import '../modules/application_success_page/bindings/application_success_page_binding.dart';
+import '../modules/application_success_page/views/application_success_page_view.dart';
 import '../modules/base_page/bindings/base_page_binding.dart';
 import '../modules/base_page/views/base_page_view.dart';
 import '../modules/dashboard_page/bindings/dashboard_page_binding.dart';
@@ -56,12 +60,22 @@ import '../modules/ekyc_page/take_document_photo/views/ekyc_page_take_document_p
 import '../modules/ekyc_page/views/ekyc_page_view.dart';
 import '../modules/help_page/bindings/help_page_binding.dart';
 import '../modules/help_page/views/help_page_view.dart';
+import '../modules/job_details_page/bindings/job_details_page_binding.dart';
+import '../modules/job_details_page/views/job_details_page_view.dart';
 import '../modules/job_page/bindings/job_page_binding.dart';
 import '../modules/job_page/views/job_page_view.dart';
+import '../modules/job_questions_page/bindings/job_questions_page_binding.dart';
+import '../modules/job_questions_page/views/job_questions_page_view.dart';
+import '../modules/jobs_list_page/bindings/jobs_list_page_binding.dart';
+import '../modules/jobs_list_page/views/jobs_list_page_view.dart';
 import '../modules/learn_page/bindings/learn_page_binding.dart';
 import '../modules/learn_page/views/learn_page_view.dart';
 import '../modules/my_jobs_page/bindings/my_jobs_page_binding.dart';
 import '../modules/my_jobs_page/views/my_jobs_page_view.dart';
+import '../modules/notification_page/bindings/notification_page_binding.dart';
+import '../modules/notification_page/views/notification_page_view.dart';
+import '../modules/notification_settings_page/bindings/notification_settings_page_binding.dart';
+import '../modules/notification_settings_page/views/notification_settings_page_view.dart';
 import '../modules/onboarding/add_user_details_page/bindings/onboarding_add_user_details_page_binding.dart';
 import '../modules/onboarding/add_user_details_page/views/onboarding_add_user_details_page_view.dart';
 import '../modules/onboarding/login_page/bindings/onboarding_login_page_binding.dart';
@@ -78,6 +92,10 @@ import '../modules/projects_list_page/bindings/projects_list_page_binding.dart';
 import '../modules/projects_list_page/views/projects_list_page_view.dart';
 import '../modules/refer_projects_page/bindings/refer_projects_page_binding.dart';
 import '../modules/refer_projects_page/views/refer_projects_page_view.dart';
+import '../modules/refer_projects_send_invite_page/bindings/refer_projects_send_invite_page_binding.dart';
+import '../modules/refer_projects_send_invite_page/views/refer_projects_send_invite_page_view.dart';
+import '../modules/similar_jobs_page/bindings/similar_jobs_page_binding.dart';
+import '../modules/similar_jobs_page/views/similar_jobs_page_view.dart';
 import '../modules/splash_page/bindings/splash_page_binding.dart';
 import '../modules/splash_page/views/splash_page_view.dart';
 import '../modules/web_view/bindings/web_view_binding.dart';
@@ -296,6 +314,51 @@ class AppPages {
       name: _Paths.REFER_PROJECTS_PAGE,
       page: () => const ReferProjectsPageView(),
       binding: ReferProjectsPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.REFER_PROJECTS_SEND_INVITE_PAGE,
+      page: () => const ReferProjectsSendInvitePageView(),
+      binding: ReferProjectsSendInvitePageBinding(),
+    ),
+    GetPage(
+      name: _Paths.JOBS_LIST_PAGE,
+      page: () => const JobsListPageView(),
+      binding: JobsListPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.JOB_DETAILS_PAGE,
+      page: () => const JobDetailsPageView(),
+      binding: JobDetailsPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.APPLICATION_REJECTED_PAGE,
+      page: () => const ApplicationRejectedPageView(),
+      binding: ApplicationRejectedPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.APPLICATION_SUCCESS_PAGE,
+      page: () => const ApplicationSuccessPageView(),
+      binding: ApplicationSuccessPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.SIMILAR_JOBS_PAGE,
+      page: () => const SimilarJobsPageView(),
+      binding: SimilarJobsPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.JOB_QUESTIONS_PAGE,
+      page: () => const JobQuestionsPageView(),
+      binding: JobQuestionsPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.NOTIFICATION_PAGE,
+      page: () => const NotificationPageView(),
+      binding: NotificationPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.NOTIFICATION_SETTINGS_PAGE,
+      page: () => const NotificationSettingsPageView(),
+      binding: NotificationSettingsPageBinding(),
     ),
   ];
 }

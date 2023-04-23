@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kamao/app/modules/job_page/models/job_model.dart';
 import 'package:kamao/app/modules/project_page/models/project_banner_model.dart';
 import 'package:kamao/app/modules/project_page/models/project_model.dart';
 import 'package:kamao/app/modules/project_page/views/projects_list.dart';
@@ -9,11 +10,40 @@ class ProjectPageController extends GetxController {
   List<Widget> projectsList = [];
   RxInt currentSlide = 0.obs;
   List<ProjectModel> projectTilesList = [];
+  List<MilestoneModel> milestonesList = [];
+
   @override
   void onInit() {
     super.onInit();
+    milestonesList = [
+      MilestoneModel(
+        title: "Milestone 1",
+        description: "Joined Zomato & completed first order within 3 days",
+        amount: "50",
+        milestoneValue: "1",
+      ),
+      MilestoneModel(
+        title: "Milestone 2",
+        description: "Completed 10 orders within 7 days",
+        amount: "100",
+        milestoneValue: "10",
+      ),
+      MilestoneModel(
+        title: "Milestone 3",
+        description: "Completed 30 orders within 15 days",
+        amount: "150",
+        milestoneValue: "30",
+      ),
+      MilestoneModel(
+        title: "Milestone 4",
+        description: "Completed 50 orders within 25 days",
+        amount: "200",
+        milestoneValue: "50",
+      ),
+    ];
     projectTilesList = [
       ProjectModel(
+        milestonesList: milestonesList,
         name: "SBI",
         description: "Demat account opening",
         image: ImagePath.imgSbi,
@@ -22,6 +52,7 @@ class ProjectPageController extends GetxController {
         amount: 800,
       ),
       ProjectModel(
+        milestonesList: milestonesList,
         name: "SBI",
         description: "Demat account opening",
         image: ImagePath.imgSbi,
@@ -30,6 +61,7 @@ class ProjectPageController extends GetxController {
         amount: 500,
       ),
       ProjectModel(
+        milestonesList: milestonesList,
         name: "SBI",
         description: "Demat account opening",
         image: ImagePath.imgSbi,

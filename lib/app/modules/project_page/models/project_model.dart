@@ -1,3 +1,5 @@
+import 'package:kamao/app/modules/job_page/models/job_model.dart';
+
 class ProjectModel {
   final String name;
   final String description;
@@ -5,6 +7,7 @@ class ProjectModel {
   final bool isTrending;
   final int earnCoins;
   final int amount;
+  final List<MilestoneModel> milestonesList;
 
   ProjectModel({
     required this.name,
@@ -13,6 +16,7 @@ class ProjectModel {
     required this.isTrending,
     required this.earnCoins,
     required this.amount,
+    required this.milestonesList,
   });
 
   factory ProjectModel.fromJson(Map<String, dynamic> json) {
@@ -23,6 +27,7 @@ class ProjectModel {
       isTrending: json['isTrending'],
       earnCoins: json['earnCoins'],
       amount: json['amount'],
+      milestonesList: json['milestonesList'],
     );
   }
 }

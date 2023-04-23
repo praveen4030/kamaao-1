@@ -6,10 +6,14 @@ import 'package:kamao/app/theme/colors.dart';
 class CustomTabBarView extends StatelessWidget {
   final List<String> tabList;
   final TabController controller;
+  final bool isScrollable;
+  final double indicatorPadding;
   const CustomTabBarView({
     Key? key,
     required this.tabList,
     required this.controller,
+    this.isScrollable = false,
+    this.indicatorPadding = 0,
   }) : super(key: key);
 
   @override
@@ -19,12 +23,13 @@ class CustomTabBarView extends StatelessWidget {
       width: Get.width,
       decoration: const BoxDecoration(),
       child: TabBar(
-        isScrollable: false,
+        isScrollable: isScrollable,
         padding: EdgeInsets.zero,
         controller: controller,
         unselectedLabelColor: Kolors.tertiarycolor,
         labelColor: Kolors.highlightcolor,
         indicatorColor: Kolors.highlightcolor,
+        indicatorPadding: EdgeInsets.symmetric(horizontal: indicatorPadding),
         labelStyle: CustomTextStyle(
           fontWeight: FontWeight.w500,
         ),

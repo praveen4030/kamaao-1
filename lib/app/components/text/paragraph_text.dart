@@ -7,11 +7,13 @@ class ParagraphText extends StatelessWidget {
   final String title;
   final String description;
   final String image;
+  final bool isDivider;
   const ParagraphText({
     Key? key,
     required this.title,
     required this.description,
     this.image = '',
+    this.isDivider = true,
   }) : super(key: key);
 
   @override
@@ -45,9 +47,10 @@ class ParagraphText extends StatelessWidget {
             ),
           ),
         const SizedBox(height: 12),
-        const CustomDivider(
-          color: Kolors.seperatorLight,
-        ),
+        if (isDivider)
+          const CustomDivider(
+            color: Kolors.seperatorLight,
+          ),
       ],
     );
   }
