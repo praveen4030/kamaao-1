@@ -65,6 +65,7 @@ class FiltersList extends GetView<JobPageController> {
         text: filterModel.text,
         onTap: () {
           filterModel.isSelected.toggle();
+          controller.appliedFiltersList.remove(filterModel);
         },
         borderWidth: 2,
         color: Kolors.seperatorHighlight,

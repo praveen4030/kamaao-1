@@ -108,7 +108,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.BASE_PAGE;
+  static const INITIAL = Routes.ONBOARDING_SELECT_LANGUAGE_PAGE;
 
   static final routes = [
     GetPage(

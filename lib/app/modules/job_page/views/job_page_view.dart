@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:kamao/app/modules/job_page/views/filters_list.dart';
 import 'package:kamao/app/modules/job_page/views/jobs_header.dart';
 import 'package:kamao/app/theme/colors.dart';
 
@@ -21,6 +22,23 @@ class JobPageView extends GetView<JobPageController> {
           const SliverToBoxAdapter(
             child: JobsHeader(),
           ),
+          Obx(
+            () => SliverAppBar(
+              leadingWidth: 0,
+              elevation: 0.0,
+              leading: const SizedBox(),
+              pinned: true,
+              floating: false,
+              toolbarHeight: (controller.isFiltersApplied()) ? 128 : 72,
+              flexibleSpace: const FlexibleSpaceBar(
+                background: Padding(
+                  padding:
+                      EdgeInsets.only(left: 16, right: 16, bottom: 16, top: 16),
+                  child: FiltersList(),
+                ),
+              ),
+            ),
+          ),
           SliverList(
             delegate: SliverChildListDelegate(
               controller.jobsList.map((e) {
@@ -34,6 +52,11 @@ class JobPageView extends GetView<JobPageController> {
               height: 162,
               width: Get.width,
               fit: BoxFit.fill,
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 50,
             ),
           ),
         ],

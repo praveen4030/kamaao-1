@@ -18,7 +18,7 @@ class JobsHeader extends GetView<JobPageController> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
@@ -88,10 +88,6 @@ class JobsHeader extends GetView<JobPageController> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 16,
-          ),
-          const FiltersList(),
         ],
       ),
     );

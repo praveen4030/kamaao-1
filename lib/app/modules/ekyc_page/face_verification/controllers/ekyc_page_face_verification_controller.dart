@@ -18,7 +18,6 @@ class EkycPageFaceVerificationController extends GetxController {
 
   @override
   void onClose() {
-    // TODO: implement onClose
     cameraController?.dispose();
     super.onClose();
   }
@@ -26,7 +25,11 @@ class EkycPageFaceVerificationController extends GetxController {
   void showSuccessDialog() {
     Future.delayed(const Duration(seconds: 2), () {
       Get.back();
-      Get.toNamed(Routes.EKYC_PAGE_AADHAR_VERIFICATION);
+      Get.toNamed(Routes.EKYC_PAGE_AADHAR_VERIFICATION)?.then(
+        (value) {
+          imageFile.value = null;
+        },
+      );
     });
     Get.dialog(
       WillPopScope(

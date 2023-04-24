@@ -18,6 +18,7 @@ class JobDetailsRequirementsPage extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const ParagraphText(
               title: 'Join Our Webinar',

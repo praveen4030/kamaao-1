@@ -18,19 +18,21 @@ class DetailsSafeWidget extends StatelessWidget {
         onTap();
       },
       child: Container(
-        height: 32,
-        width: 231,
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
         decoration: BoxDecoration(
           color: Kolors.foundationLightBlue,
           borderRadius: BorderRadius.circular(5),
         ),
-        child: Center(
-            child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
               ImagePath.verify,
               height: 16,
+            ),
+            const SizedBox(
+              width: 8,
             ),
             Text(
               "Your information is 100% safe with us",
@@ -41,7 +43,7 @@ class DetailsSafeWidget extends StatelessWidget {
               ),
             ),
           ],
-        )),
+        ),
       ),
     );
   }

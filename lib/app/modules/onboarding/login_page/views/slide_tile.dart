@@ -18,9 +18,9 @@ class SlideTile extends StatelessWidget {
       children: [
         Image.asset(
           model.image,
-          height: 380,
           width: Get.width,
           fit: BoxFit.fill,
+          height: 390,
         ),
         const SizedBox(
           height: 5,

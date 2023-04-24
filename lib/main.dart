@@ -30,7 +30,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       initialRoute: AppPages.INITIAL,
-      initialBinding: BasePageBinding(),
+      initialBinding: OnboardingSelectLanguagePageBinding(),
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
       title: "Kamaao",

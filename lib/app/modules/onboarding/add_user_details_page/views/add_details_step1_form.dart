@@ -34,6 +34,7 @@ class AddDetailsStep1Form
           tec: controller.dobTEC,
           prefixIcon: 'assets/images/png/icons/calendar.png',
           onTap: () {
+            FocusManager.instance.primaryFocus?.unfocus();
             datePick();
           },
           isEnabled: false,
@@ -41,6 +42,9 @@ class AddDetailsStep1Form
         const SizedBox(height: 16),
         Obx(
           () => PopupMenuButton<String>(
+            onOpened: () {
+              FocusManager.instance.primaryFocus?.unfocus();
+            },
             position: PopupMenuPosition.under,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(4),
@@ -87,7 +91,7 @@ class AddDetailsStep1Form
         horizontal: 16,
       ),
       height: 46,
-      child: Container(
+      child: SizedBox(
         height: 46,
         width: double.infinity, // Add this line
         child: Column(

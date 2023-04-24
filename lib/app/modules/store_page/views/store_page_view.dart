@@ -13,12 +13,6 @@ class StorePageView extends GetView<StorePageController> {
         title: const Text('StorePageView'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          'StorePageView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
     );
   }
 }

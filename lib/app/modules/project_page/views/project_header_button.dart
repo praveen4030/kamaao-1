@@ -19,7 +19,7 @@ class ProjectHeaderButton extends StatelessWidget {
       onTap: () {
         Get.toNamed(
           Routes.PROJECTS_LIST_PAGE,
-          arguments: text.toLowerCase(),
+          arguments: text,
         );
       },
       child: Column(

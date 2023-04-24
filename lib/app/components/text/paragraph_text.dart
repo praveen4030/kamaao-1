@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kamao/app/components/text/custom_text.dart';
 import 'package:kamao/app/components/widgets/custom_divider.dart';
 import 'package:kamao/app/theme/colors.dart';
@@ -36,6 +37,8 @@ class ParagraphText extends StatelessWidget {
           Image.asset(
             image,
             height: 114,
+            width: Get.width,
+            fit: BoxFit.fill,
           ),
         if (description.isNotEmpty)
           Text(

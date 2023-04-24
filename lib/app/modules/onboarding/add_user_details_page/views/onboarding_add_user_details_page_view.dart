@@ -75,7 +75,7 @@ class OnboardingAddUserDetailsPageView
             () => PrimaryButton(
               onTap: () {
                 if (controller.isFinalStep.value) {
-                  Get.toNamed(Routes.ACCOUNT_PROFILE_PAGE);
+                  Get.offNamed(Routes.BASE_PAGE);
                   return;
                 }
                 controller.isFinalStep(true);

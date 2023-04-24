@@ -25,12 +25,18 @@ class EkycPageEkycDetailsVerificationView
             subtitle:
                 "Please wait for few minutes don’t close the application. Your onboarding KYC verification is under process",
           ),
-          const Spacer(),
+          const Expanded(
+            flex: 1,
+            child: SizedBox.shrink(),
+          ),
           Image.asset(
             ImagePath.verifyphn,
             height: Get.height * 0.5,
           ),
-          const Spacer(),
+          const Expanded(
+            flex: 3,
+            child: SizedBox.shrink(),
+          ),
           Align(
             alignment: Alignment.center,
             child: DetailsSafeWidget(

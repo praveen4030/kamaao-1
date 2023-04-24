@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:kamao/app/components/text/custom_text.dart';
 import 'package:kamao/app/modules/dashboard_page/views/dashboard_page_view.dart';
 import 'package:kamao/app/modules/job_page/views/job_page_view.dart';
@@ -21,11 +21,11 @@ class BasePageView extends GetView<BasePageController> {
         toolbarHeight: 0,
         elevation: 0,
       ),
-      body: PageView(
-        controller: controller.pagecontroller,
-        onPageChanged: controller.onPageChanged,
+      body: TabBarView(
+        controller: controller.tabController,
+        // onPageChanged: controller.onPageChanged,
         physics: const NeverScrollableScrollPhysics(),
-        children: const [
+        children: [
           JobPageView(),
           ProjectPageView(),
           DashboardPageView(),
@@ -33,16 +33,17 @@ class BasePageView extends GetView<BasePageController> {
           LearnPageView(),
         ],
       ),
-      bottomSheet: SizedBox(
-        height: 49,
-        child: DefaultTabController(
-          length: 5,
+      bottomSheet: Obx(
+        () => SizedBox(
+          height: 49,
           child: TabBar(
+            controller: controller.tabController,
             padding: EdgeInsets.zero,
             indicatorPadding: EdgeInsets.zero,
             indicatorSize: TabBarIndicatorSize.tab,
             indicatorWeight: 0,
             indicatorColor: Kolors.highlightcolor,
+            isScrollable: false,
             indicator: BoxDecoration(
               border: Border(
                 top: BorderSide(
@@ -52,7 +53,7 @@ class BasePageView extends GetView<BasePageController> {
               ),
             ),
             labelPadding: EdgeInsets.zero,
-            onTap: controller.onTap,
+            // onTap: controller.onTap,
             tabs: [
               Tab(
                 iconMargin: EdgeInsets.zero,
@@ -86,25 +87,27 @@ class BasePageView extends GetView<BasePageController> {
     int index,
     String text,
   ) {
-    return Obx(
-      () => Container(
-        color: index == controller.pageIndex.value
-            ? const Color(0xffFFF5F0)
-            : Colors.white,
-        width: Get.width / 5,
-        height: 46,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              "assets/images/png/icons/$icon.png",
-              color: index == controller.pageIndex.value
-                  ? Kolors.highlightcolor
-                  : Kolors.primarycolor,
-              height: 24,
-              width: 24,
-            ),
-            Text(
+    return Container(
+      color: index == controller.pageIndex.value
+          ? const Color(0xffFFF5F0)
+          : Colors.white,
+      // width: Get.width / 5,
+      height: 46,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Image.asset(
+            "assets/images/png/icons/$icon.png",
+            color: index == controller.pageIndex.value
+                ? Kolors.highlightcolor
+                : Kolors.primarycolor,
+            height: 24,
+            width: 24,
+          ),
+          Center(
+            child: Text(
               text,
               style: CustomTextStyle(
                 fontSize: 10,
@@ -113,8 +116,8 @@ class BasePageView extends GetView<BasePageController> {
                     : Kolors.primarycolor,
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -93,7 +93,7 @@ class ProjectDetailsPageView extends GetView<ProjectDetailsPageController> {
           body: Builder(
             builder: (context) {
               return Container(
-                padding: const EdgeInsets.only(bottom: 100),
+                padding: const EdgeInsets.only(bottom: 80),
                 color: Kolors.backgroundSecondary,
                 child: TabBarView(
                   controller: controller.tabController,

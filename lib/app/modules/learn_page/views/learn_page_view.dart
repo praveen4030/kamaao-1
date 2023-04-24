@@ -10,15 +10,10 @@ class LearnPageView extends GetView<LearnPageController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('LearnPageView'),
+        title: const Text('Learn'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          'LearnPageView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: const SizedBox(),
     );
   }
 }

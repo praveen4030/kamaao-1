@@ -173,9 +173,7 @@ class ApplicationSuccessPageView
             children: [
               BorderButton(
                 color: Kolors.backgroundActionColor,
-                onTap: () {
-                  Get.toNamed(Routes.REFER_PROJECTS_PAGE, arguments: false);
-                },
+                onTap: () {},
                 text: 'Message HR',
                 icon: 'assets/images/png/icons/message-text.png',
               ),

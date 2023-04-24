@@ -10,14 +10,8 @@ class DashboardPageView extends GetView<DashboardPageController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('DashboardPageView'),
+        title: const Text('Dashboard'),
         centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'DashboardPageView is working',
-          style: TextStyle(fontSize: 20),
-        ),
       ),
     );
   }

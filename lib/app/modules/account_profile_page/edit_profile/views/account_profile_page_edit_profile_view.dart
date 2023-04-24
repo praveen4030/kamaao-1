@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:kamao/app/components/bottom_sheet/bottom_sheet_button.dart';
+import 'package:kamao/app/components/bottom_sheet/custom_bs.dart';
+import 'package:kamao/app/components/bottom_sheet/upload_document_bs.dart';
 import 'package:kamao/app/components/text/text_field_widget.dart';
 import 'package:kamao/app/components/widgets/custom_app_bar.dart';
 
@@ -92,36 +94,70 @@ class AccountProfilePageEditProfileView
   }
 
   Widget imageWidget() {
-    return Container(
-      margin: const EdgeInsets.only(top: 24, bottom: 48),
-      child: Stack(
-        alignment: Alignment.bottomRight,
-        children: [
-          Container(
-            padding: const EdgeInsets.all(8),
-            height: 100,
-            width: 100,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: NetworkImage(
-                  'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
+    return InkWell(
+      onTap: () {
+        showCustomBottomSheet(
+            child: UploadDocumentBs(
+          isOpenCamera: true,
+          pickImageTap: (image) {
+            if (image != null) {
+              controller.imageFile.value = image;
+            }
+            Get.back();
+          },
+          takePhotoTap: (image) {
+            if (image != null) {
+              controller.imageFile.value = image;
+            }
+            Get.back();
+          },
+        ));
+      },
+      child: Obx(
+        () => Container(
+          margin: const EdgeInsets.only(top: 24, bottom: 48),
+          child: Stack(
+            alignment: Alignment.bottomRight,
+            children: [
+              controller.imageFile.value != null
+                  ? Container(
+                      padding: const EdgeInsets.all(8),
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: FileImage(controller.imageFile.value!)),
+                      ),
+                    )
+                  : Container(
+                      padding: const EdgeInsets.all(8),
+                      height: 100,
+                      width: 100,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                            'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
+                          ),
+                        ),
+                      ),
+                    ),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Image.asset(
+                  "assets/images/png/icons/edit.png",
+                  height: 20,
+                  width: 20,
                 ),
               ),
-            ),
+            ],
           ),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Image.asset(
-              "assets/images/png/icons/edit.png",
-              height: 20,
-              width: 20,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

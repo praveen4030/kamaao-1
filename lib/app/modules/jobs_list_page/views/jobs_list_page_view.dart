@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:kamao/app/components/widgets/custom_app_bar.dart';
+import 'package:kamao/app/modules/job_page/controllers/job_page_controller.dart';
+import 'package:kamao/app/modules/job_page/views/filters_list.dart';
 import 'package:kamao/app/modules/job_page/views/job_tile.dart';
 import 'package:kamao/app/theme/colors.dart';
 
@@ -11,40 +13,29 @@ class JobsListPageView extends GetView<JobsListPageController> {
   const JobsListPageView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final jobController = Get.find<JobPageController>();
     return Scaffold(
       backgroundColor: Kolors.backgroundSecondary,
       appBar: customAppBar(title: controller.category),
       body: CustomScrollView(
         slivers: [
-          // SliverToBoxAdapter(
-          //   child: Container(
-          //     height: 72,
-          //     padding: const EdgeInsets.symmetric(vertical: 16),
-          //     color: Colors.white,
-          //     child: ListView.builder(
-          //       scrollDirection: Axis.horizontal,
-          //       itemCount: controller.buttonsList.length,
-          //       itemBuilder: (context, index) {
-          //         return Obx(
-          //           () => Padding(
-          //             padding: EdgeInsets.only(
-          //                 left: index == 0 ? 16 : 4,
-          //                 right: index == controller.buttonsList.length - 1
-          //                     ? 16
-          //                     : 0),
-          //             child: BorderSelectButton(
-          //               text: controller.buttonsList[index],
-          //               isSelected: controller.selectedIndex.value == index,
-          //               onTap: () {
-          //                 controller.selectedIndex.value = index;
-          //               },
-          //             ),
-          //           ),
-          //         );
-          //       },
-          //     ),
-          //   ),
-          // ),
+          Obx(
+            () => SliverAppBar(
+              leadingWidth: 0,
+              elevation: 0.0,
+              leading: const SizedBox(),
+              pinned: true,
+              floating: false,
+              toolbarHeight: (jobController.isFiltersApplied()) ? 128 : 72,
+              flexibleSpace: const FlexibleSpaceBar(
+                background: Padding(
+                  padding:
+                      EdgeInsets.only(left: 16, right: 16, bottom: 16, top: 16),
+                  child: FiltersList(),
+                ),
+              ),
+            ),
+          ),
           SliverPadding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             sliver: SliverList(

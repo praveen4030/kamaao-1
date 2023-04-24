@@ -310,4 +310,13 @@ class JobPageController extends GetxController {
       appliedFiltersList.clear();
     }
   }
+
+  bool isFiltersApplied() {
+    for (var element in appliedFiltersList) {
+      if (element.isSelected.value) {
+        return true;
+      }
+    }
+    return false;
+  }
 }

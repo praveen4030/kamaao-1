@@ -10,7 +10,14 @@ class CommonBasePageAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      Image.asset("assets/images/profile.png"),
+      InkWell(
+        onTap: () {
+          Get.toNamed(Routes.ACCOUNT_PROFILE_PAGE);
+        },
+        child: Image.asset(
+          "assets/images/profile.png",
+        ),
+      ),
       const Spacer(),
       icon("assets/images/png/icons/telegram.png", () {
         showCustomBottomSheet(child: const TelegramShareBs());

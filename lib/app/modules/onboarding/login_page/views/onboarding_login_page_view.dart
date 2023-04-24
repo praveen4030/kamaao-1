@@ -28,11 +28,11 @@ class OnboardingLoginPageView extends GetView<OnboardingLoginPageController> {
         padding: const EdgeInsets.symmetric(horizontal: 16),
         children: [
           const SizedBox(
-            height: 20,
+            height: 24,
           ),
           CarouselSlider(
             options: CarouselOptions(
-              height: 510,
+              height: 530,
               viewportFraction: 1.0,
               autoPlay: true,
               enableInfiniteScroll: true,

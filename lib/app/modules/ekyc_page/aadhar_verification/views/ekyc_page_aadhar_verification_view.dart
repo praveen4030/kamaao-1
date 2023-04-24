@@ -40,7 +40,7 @@ class EkycPageAadharVerificationView
                 Get.back();
               },
               takePhotoTap: (image) {
-                controller.aadharBackImage.value = image;
+                controller.aadharFrontImage.value = image;
               },
             ),
             const SizedBox(

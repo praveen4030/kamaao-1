@@ -32,6 +32,9 @@ class ProjectPageView extends GetView<ProjectPageController> {
                     width: Get.width,
                     fit: BoxFit.fill,
                   ),
+                  const SizedBox(
+                    height: 50,
+                  ),
                 ],
               ),
             ),
